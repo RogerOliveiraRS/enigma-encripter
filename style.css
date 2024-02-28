@@ -1,7 +1,7 @@
-.body {
+body {
     margin: 0;
     padding: 0;
-    background-image: url('CHALLENGE ONE VSC/assets/resist.jpeg'); 
+    background: url(assets/resist.jpeg);
     background-size: cover;
     background-position: center;
 }

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Encrypter</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="logo.png" alt="Logo" style="position: absolute; top: 0; left: 0;">
+        <h1>The Next is the ONE who try this Encrypter</h1>
+    </header>
+
+    <main>
+
+        <div>
+            <p id="instrucaoEntrada">Digite seu texto</p>
+            <textarea id="textoEntrada"></textarea>
+        </div>
+        
+        
+        <div>
+            <textarea id="textoSaida" readonly></textarea>
+        </div>
+
+        <div id="conteudoParaCriptografar">
+           <!-- <img id="imagemNaSaida" src="misterio_transp.png" alt="Mistério">-->
+            <p id="instrucaoNaSaida">Salve o texto Original depois de criptografado </p>
+            <p id="instrucaoNaSaida2">Em um minuto se texto original irá desaparecer </p>
+        </div>
+        
+        
+
+        
+
+
+        <div class="warning">
+            <img src="warning.png" alt="Warning">
+            <p>Apenas letras minúsculas e sem acento</p>
+        </div>
+
+        <!-- Elemento para exibir mensagens de erro -->
+        <div id="mensagemDeErro" class="error-message"></div>
+            
+        <div style="display: flex; justify-content: space-between;">
+            <button onclick="criptografa()">Criptografar</button>
+            <button onclick="descriptografa()">Descriptografar</button>
+            <button onclick="copiaParaTransferir()">Copiar</button>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>Desenvolvido por Roger Oliveira Nunes Gomes para Alura/Oracle - Programa One - rogeroliveiralouvor@gmail.com</p>
+    </footer>
+
+    <!-- Referenciando o arquivo JavaScript externo -->
+    <script src="script.js"></script>
+
+</body>
+
+
+</html>
+

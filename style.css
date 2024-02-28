@@ -4,5 +4,26 @@ body {
     background: url(assets/resist.jpeg);
     background-size: cover;
     background-position: center;
+    filter: brightness(0.3); /* Valor entre 0 e 1 (0 = totalmente escuro, 1 = original) */
 }
- 
+
+
+.cabecalho{
+    background-color: transparent;
+
+}
+
+.imagem__logo{
+  
+        width: 3%; /* A imagem ocupará metade da largura da tela */
+        height: auto;
+        filter: brightness(1); /* Mantém a imagem com o brilho original (100%) */
+        opacity: 1; /* Define a opacidade da imagem como 100% */
+    }
+
+    
+
+.slogan__do__produto{
+
+
+}

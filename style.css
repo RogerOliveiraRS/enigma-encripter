@@ -20,7 +20,7 @@ body {
 
 .cabecalho{
     font-family: "Handjet", sans-serif;
-    font-size: 2rem;
+    font-size: 1.75rem;
     font-weight: 50;
     font-style: normal;
     color: #E5E5E5;
@@ -42,14 +42,18 @@ body {
         height: auto;
         filter: brightness(1); /* Mantém a imagem com o brilho original (100%) */
         opacity: 1; /* Define a opacidade da imagem como 100% */
-        padding: 2rem 15rem 0 5rem;
+        padding: 0.7% 15rem 0 5rem;
     }
 
 
-.insrucao--para--entrada{
+.elementos__lado__a__lado{
+    display: flex;
+    flex-direction: row;
+    align-items: center
+}
 
-
-
+.texto__instrucao__entrada{
+   color: #E5E5E5;
 }
 
 

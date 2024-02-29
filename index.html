@@ -30,36 +30,39 @@
 
     <header class="cabecalho">
         <img src="assets/logo_alura_branco.png" alt="Logo" class="imagem__logo">
-    <h1 class="slogan__do __produto">The Next is the ONE who try this Encrypter<h1>
+    <h1 class="slogan__do __produto">The Next is the ONE who try this Encrypter!<h1>
     </header>
 
 
     <main>
         
-        <section class="setor__mensagens__e__avisos">       
-            <div class="instrucao__e__entrada">
-                <div class="texto__instrucao__entrada"><p id="instrucaoEntrada">Digite seu texto</p></div>
-                <div class="area__caixa__entrada"><textarea id="textoEntrada"></textarea></div>   
-            </div>
+        <section class="setor__mensagens__e__avisos"> 
+            <div class="elementos__lado__a__lado">
+                <div class="instrucao__e__entrada">
+                    <div class="texto__instrucao__entrada"><p id="instrucaoEntrada">Digite seu texto</p></div>
+                    <div class="area__caixa__entrada"><textarea id="textoEntrada"></textarea></div>   
+                </div>
+                
+                
+                <div class="area__texto__saida">
+                    <textarea id="textoSaida" readonly></textarea>
+                </div>
+    
+                <div id="conteudoParaCriptografar">
+                <!-- <img id="imagemNaSaida" src="misterio_transp.png" alt="Mistério">-->
+                    <p id="instrucaoNaSaida">Salve o texto Original depois de criptografado </p>
+                    <p id="instrucaoNaSaida2">Em um minuto se texto original irá desaparecer </p>
+                </div>
             
-            
-            <div class="area__texto__saida">
-                <textarea id="textoSaida" readonly></textarea>
-            </div>
-
-            <div id="conteudoParaCriptografar">
-            <!-- <img id="imagemNaSaida" src="misterio_transp.png" alt="Mistério">-->
-                <p id="instrucaoNaSaida">Salve o texto Original depois de criptografado </p>
-                <p id="instrucaoNaSaida2">Em um minuto se texto original irá desaparecer </p>
-            </div>
-        
-            <div class="warning">
-                <img src="warning.png" alt="Warning" class="icone__Aviso">
-                <p>Apenas letras minúsculas e sem acento</p>
-            </div>
+                <div class="warning">
+                    <img src="warning.png" alt="Warning" class="icone__Aviso">
+                    <p>Apenas letras minúsculas e sem acento</p>
+                </div>
+            </div>      
+  
 
             <!-- Elemento para exibir mensagens de erro -->
-            <div id="mensagemDeErro" class="error-message"></div>
+            <div id="mensagemDeErro" class="mensagem__erro"></div>
     
             <div class="espaço__para__botoes" style="display: flex; justify-content: space-between;">
                 <button onclick="criptografa()">Criptografar</button>

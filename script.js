@@ -2,16 +2,13 @@ let timeoutId;
 
 function instrucaoCampoEntrada() {
     const textoNaEntrada = document.getElementById('textoEntrada').value;
-    console.log('textoEntrada:', textoNaEntrada); // Exibe o texto no console
     const instruction = document.getElementById('instrucaoEntrada');
-   /* if (inputText === '') {
+    if (inputText === '') {
         instruction.style.display = 'block';
     } else {
         instruction.style.display = 'none';
-    }*/
+    }
 }
-
-
 
 function criptografa() {
     const textoNaEntrada = document.getElementById('textoEntrada').value;
@@ -108,6 +105,21 @@ function resetSaida() {
 
 document.addEventListener('DOMContentLoaded', () => {
     resetSaida();
+});
+
+// Adiciona um event listener para o evento focus na área de texto
+document.getElementById('textoEntrada').addEventListener('focus', function() {
+    // Ao focar na área de texto, limpa seu conteúdo e remove a instrução
+    this.value = '';
+    document.getElementById('instrucaoEntrada').style.display = 'none';
+});
+
+// Adiciona um event listener para o evento blur na área de texto
+document.getElementById('textoEntrada').addEventListener('blur', function() {
+    // Ao perder o foco da área de texto e se ela estiver vazia, exibe a instrução novamente
+    if (this.value === '') {
+        document.getElementById('instrucaoEntrada').style.display = 'block';
+    }
 });
 
 

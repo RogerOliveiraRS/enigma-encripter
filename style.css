@@ -19,41 +19,71 @@ body {
 
 
 .cabecalho{
-    font-family: "Handjet", sans-serif;
-    font-size: 1.75rem;
-    font-weight: 50;
-    font-style: normal;
-    color: #E5E5E5;
     display: flex;
     flex-direction: row;
     align-items: center;
-    /*font-variation-settings:
-    "ELGR" 1,
-    "ELSH" 2;
-    font-family: "cc-ultimatum-force-variable",sans-serif;
-    font-size: 2rem;
-    color:#E5E5E5;
-    font-weight: 200; 
-   padding: 2.8rem 0 0 5rem;*/
 }
 
+
+
 .imagem__logo{
-        width: 3%;
+        width: 2.5rem;
         height: auto;
         filter: brightness(1); /* Mantém a imagem com o brilho original (100%) */
         opacity: 1; /* Define a opacidade da imagem como 100% */
-        padding: 0.7% 15rem 0 5rem;
+        padding: 3rem 15rem 0 5rem;
     }
 
+ .imagem__titulo{
+    width: 46rem;
+    height: auto;
+    padding-top: 2.8rem;
+    filter: brightness(1); /* Mantém a imagem com o brilho original (100%) */
+    opacity: 1; /* Define a opacidade da imagem como 100% */
+ }   
 
-.elementos__lado__a__lado{
-    display: flex;
-    flex-direction: row;
-    align-items: center
+    .entrada__e__saida__textos {
+        padding: 4%;
+        display: flex; 
+        flex-direction: row;/* Exibe os elementos dentro do <main> lado a lado */
+        justify-content: space-between; /* Espaçamento igual entre os elementos */
+    }
+
+    .textoEntrada::placeholder{
+        font-size: 1.8rem;
+
+    }
+
+.imagem__alerta{
+width: 4rem;
+height: auto;
+padding-right: 1.5rem;
+padding-left: 1.5rem;
 }
+
+
+textarea{
+    border: 1px solid #22D4FD;
+    width: 47.5rem;
+    height: 45.5rem;
+    text-align: center;
+    border-radius: 1.8rem;
+    font-size: 1.5rem;
+    color: #69FB16; /* Cor do texto */
+    text-decoration: none;
+    background-color: rgba(13, 13, 13, 0.6); /* Cor do fundo com 60% de opacidade */
+}
+
+
 
 .texto__instrucao__entrada{
    color: #E5E5E5;
+}
+
+
+.instrucaoNaSaida{
+color:#E5E5E5
+
 }
 
 

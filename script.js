@@ -3,49 +3,58 @@ let timeoutId;
 function instrucaoCampoEntrada() {
     const textoNaEntrada = document.getElementById('textoEntrada').value;
     const instruction = document.getElementById('instrucaoEntrada');
-    if (inputText === '') {
+    if (textoNaEntrada === '') {
         instruction.style.display = 'block';
     } else {
         instruction.style.display = 'none';
     }
 }
 
+function exibirMensagemErro(mensagem) {
+    const mensagemDeErro = document.getElementById('mensagens__de__erro');
+    mensagemDeErro.textContent = mensagem;
+    mensagemDeErro.style.visibility = 'visible'; // Exibe a mensagem de erro
+}
+
+function ocultarMensagemErro() {
+    document.getElementById('mensagens__de__erro').style.visibility = 'hidden'; // Oculta a mensagem de erro
+}
+
+function resetMensagemErro() {
+    // Reseta as mensagens de erro para que não sejam exibidas
+    document.getElementById('mensagens__de__erro').textContent = '';
+    document.getElementById('mensagens__de__erro').style.visibility = 'hidden';
+}
+
+
 function criptografa() {
     const textoNaEntrada = document.getElementById('textoEntrada').value;
-    const mensagemDeErro = document.getElementById('mensagemDeErro');
-    const textoNaSaida = document.getElementById('textoSaida');
+    const mensagemDeErro = document.getElementById('mensagens__de__erro');
 
     if (textoNaEntrada.trim() === '') {
         // Campo vazio, exibe mensagem de erro
-        mensagemDeErro.textContent = 'Digite uma palavra ou texto em letras minúsculas, sem acentuação ou espaços.';
-        textoNaSaida.value = ''; // Limpa o campo de saída
-        mensagemDeErro.style.display = 'block'; // Exibe a mensagem de erro
+        exibirMensagemErro('Você primeiro precisa digitar algo.');
         resetSaida(); // Limpa a saída
     } else if (!/^[a-z]+$/.test(textoNaEntrada)) {
         // Texto com caracteres não permitidos, exibe mensagem de erro
-        mensagemDeErro.textContent = 'Somente letras minúsculas, palavra ou texto contínuo, sem espaços, acentuação ou qualquer outro caractere.';
-        textoNaSaida.value = ''; // Limpa o campo de saída
-        mensagemDeErro.style.display = 'block'; // Exibe a mensagem de erro
+        exibirMensagemErro('Digite somente letras minúsculas, palavra ou texto contínuo, sem espaços, acentuação ou qualquer outro caractere.');
         resetSaida(); // Limpa a saída
     } else {
         // Realiza a criptografia
-        mensagemDeErro.style.display = 'none'; // Esconde a mensagem de erro se houver
+        ocultarMensagemErro(); // Oculta a mensagem de erro se houver
         encripta();
     }
 }
 
-
 function encripta() {
     const textoNaEntrada = document.getElementById('textoEntrada').value;
     const textoCriptografado = textoNaEntrada.replace(/a/g, 'ai')
-                                         .replace(/e/g, 'enter')
-                                         .replace(/i/g, 'imes')
-                                         .replace(/o/g, 'ober')
-                                         .replace(/u/g, 'ufat');
+        .replace(/e/g, 'enter')
+        .replace(/i/g, 'imes')
+        .replace(/o/g, 'ober')
+        .replace(/u/g, 'ufat');
     document.getElementById('textoSaida').value = textoCriptografado;
-   // document.getElementById('imagemNaSaida').style.display = 'none';
     document.getElementById('instrucaoNaSaida').style.display = 'none';
-    document.getElementById('botaoCriptografar').style.backgroundColor = '#E5E5E5';
     resetEntrada();
     setTimeout(() => {
         const intervalId = setInterval(() => {
@@ -57,8 +66,7 @@ function encripta() {
             document.getElementById('textoEntrada').style.visibility = '';
         }, 30000);
     }, 30000);
-} 
-
+}
 
 function descriptografa() {
     const encryptedText = document.getElementById('textoSaida').value;
@@ -73,7 +81,6 @@ function descriptografa() {
     resetSaida();
 }
 
-
 function copiaParaTransferir() {
     const textoNaSaida = document.getElementById('textoSaida').value;
     if (textoNaSaida) {
@@ -86,7 +93,6 @@ function copiaParaTransferir() {
     }
 }
 
-
 function resetEntrada() {
     clearTimeout(timeoutId);
     timeoutId = setTimeout(() => {
@@ -94,33 +100,30 @@ function resetEntrada() {
     }, 60000);
 }
 
-
 function resetSaida() {
     document.getElementById('textoSaida').value = '';
-   //document.getElementById('imagemNaSaida').style.display = 'block';
     document.getElementById('instrucaoNaSaida').style.display = 'block';
 }
 
-
-
 document.addEventListener('DOMContentLoaded', () => {
     resetSaida();
+
+    // Adiciona um manipulador de evento para o evento focus na área de texto
+    document.getElementById('textoEntrada').addEventListener('focus', function () {
+        // Ao focar na área de texto, limpa seu conteúdo e remove a instrução
+        this.value = '';
+        document.getElementById('instrucaoEntrada').style.display = 'none';
+
+        // Reseta as mensagens de erro quando a área de texto é focada
+        resetMensagemErro();
+    });
+
+    // Adiciona um manipulador de evento para o evento click na área de texto
+    document.getElementById('textoEntrada').addEventListener('click', function () {
+        // Reseta as mensagens de erro quando a área de texto é clicada
+        resetMensagemErro();
+    });
+
+    // Chama a função instrucaoCampoEntrada no evento DOMContentLoaded
+    instrucaoCampoEntrada();
 });
-
-// Adiciona um event listener para o evento focus na área de texto
-document.getElementById('textoEntrada').addEventListener('focus', function() {
-    // Ao focar na área de texto, limpa seu conteúdo e remove a instrução
-    this.value = '';
-    document.getElementById('instrucaoEntrada').style.display = 'none';
-});
-
-// Adiciona um event listener para o evento blur na área de texto
-document.getElementById('textoEntrada').addEventListener('blur', function() {
-    // Ao perder o foco da área de texto e se ela estiver vazia, exibe a instrução novamente
-    if (this.value === '') {
-        document.getElementById('instrucaoEntrada').style.display = 'block';
-    }
-});
-
-
-

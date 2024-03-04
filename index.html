@@ -13,72 +13,75 @@
 
 </head>
 
-    <body>
+<body>
 
-        <div class="background__container"></div>
+    <div class="background__container"></div>
 
-        <header class="cabecalho">
-            <img src="assets/logo_alura_branco.png" alt="Logo" class="imagem__logo">
-            <img src="assets/cabecalho_wht.png" alt="Nome do produto" class="imagem__titulo">
-        </header>
-
-
-        <main>
-
-              <div class="avisos__uteis">
-                    <div class="alerta__autodestruicao"></div>
-                    <div class="lembrete__salvar"></div>
+    <header class="cabecalho">
+        <img src="assets/logo_alura_branco.png" alt="Logo" class="imagem__logo">
+        <img src="assets/cabecalho_wht.png" alt="Nome do produto" class="imagem__titulo">
+    </header>
 
 
-              </div>
+    <main>
 
-              <div class="entrada__e__saida__textos"> 
-                    <div class="instrucao__e__entrada">
-                    <!--<div class="texto__instrucao__entrada"><p id="instrucaoEntrada">Digite seu texto</p></div>-->
-                        <div class="area__caixa__entrada">
-                            <textarea id="textoEntrada" placeholder="Digite seu texto"></textarea>
-                        </div>
-                    </div>
+        <div class="mensagens__de__erro"> <!-- Correção aqui -->
+            <div id="mensagens__de__erro"></div>
+        </div>
 
-                    <div>
-                       <img id="pisca__alerta" src="assets/warning-icon.png" alt="ícone de alerta" class="imagem__alerta">
-                    
-                    </div>
-                        
-                    <div class="area__texto__saida">
-                        <textarea id="textoSaida" readonly></textarea>
-                    </div>
+
+        <div class="avisos__uteis">
+            <div class="alerta__autodestruicao"></div>
+            <div class="lembrete__salvar"></div>
+        </div>
+
+
+
+        <div class="entrada__e__saida__textos">
+            <div class="instrucao__e__entrada">
+                <!--<div class="texto__instrucao__entrada"><p id="instrucaoEntrada">Digite seu texto</p></div>-->
+                <div class="area__caixa__entrada">
+                    <textarea id="textoEntrada" class="digite__seu__texto">Digite seu texto</textarea> <!-- Correção aqui -->
                 </div>
+            </div>
 
-                <div id="lembrete__alerta">
-                    <!-- <img id="imagemNaSaida" src="misterio_transp.png" alt="Mistério">-->
-                        <p id="instrucaoNaSaida">você pode salvar o texto!  </p>
-                        <p id="instrucaoNaSaida2">Em um minuto, o texto original irá desaparecer </p>
-                </div>
-                
-                <!--<div class="warning">
+            <div>
+                <img id="pisca__alerta" src="assets/warning-icon.png" alt="ícone de alerta" class="imagem__alerta">
+            </div>
+
+            <div class="area__texto__saida">
+                <textarea id="textoSaida" readonly></textarea>
+            </div>
+        </div>
+
+        <div id="lembrete__alerta">
+            <!-- <img id="imagemNaSaida" src="misterio_transp.png" alt="Mistério">-->
+            <p id="instrucaoNaSaida">você pode salvar o texto! </p>
+            <p id="instrucaoNaSaida2">Em um minuto, o texto original irá desaparecer </p>
+        </div>
+
+        <!--<div class="warning">
                         <img src="warning.png" alt="Warning" class="icone__Aviso">
                         <p>Apenas letras minúsculas e sem acento</p>
                 </div> -->
 
-                
-            
 
-        
-                <div class="espaço__para__botoes" style="display: flex; justify-content: space-between;">
-                    <button onclick="criptografa()">Criptografar</button>
-                    <button onclick="descriptografa()">Descriptografar</button>
-                    <button onclick="copiaParaTransferir()">Copiar</button>
-                </div>
-    
-        </main>
 
-        <footer>
-            <p class="texto__rodape">Desenvolvido por Roger Oliveira Nunes Gomes para Alura/Oracle - Programa One - rogeroliveiralouvor@gmail.com</p>
-        </footer>
+        <div class="espaço__para__botoes" style="display: flex; justify-content: space-between;">
+            <button onclick="criptografa()">Criptografar</button>
+            <button onclick="descriptografa()">Descriptografar</button>
+            <button onclick="copiaParaTransferir()">Copiar</button>
+        </div>
 
-        <!-- Referenciando o arquivo JavaScript externo -->
-        <script src="script.js"></script>
+    </main>
 
-    </body>
+    <footer>
+        <p class="texto__rodape">Desenvolvido por Roger Oliveira Nunes Gomes para Alura/Oracle - Programa One - rogeroliveiralouvor@gmail.com</p>
+    </footer>
+
+    <!-- Referenciando o arquivo JavaScript externo -->
+    <script src="script.js"></script>
+
+</body>
+
 </html>

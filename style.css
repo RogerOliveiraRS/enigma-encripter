@@ -40,7 +40,15 @@ body {
     padding-top: 2.8rem;
     filter: brightness(1); /* Mantém a imagem com o brilho original (100%) */
     opacity: 1; /* Define a opacidade da imagem como 100% */
- }   
+ } 
+ 
+ #mensagens__de__erro {
+    color: #FF7E07; /* Cor laranja para as mensagens de erro */
+    height: 1.5rem; /* Altura fixa para evitar movimento dos elementos abaixo */
+    margin-top: 0.5rem; /* Espaçamento superior para separar as mensagens de erro dos elementos acima */
+    visibility: hidden; /* Inicialmente oculta */
+}
+
 
     .entrada__e__saida__textos {
         padding: 4%;
@@ -79,6 +87,8 @@ textarea{
 .texto__instrucao__entrada{
    color: #E5E5E5;
 }
+
+
 
 
 .instrucaoNaSaida{

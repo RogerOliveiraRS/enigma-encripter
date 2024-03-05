@@ -29,7 +29,7 @@ function resetMensagemErro() {
 
 function criptografa() {
     const textoNaEntrada = document.getElementById('textoEntrada').value;
-    const mensagemDeErro = document.getElementById('mensagens__de__erro');
+    
 
     if (textoNaEntrada.trim() === '' || textoNaEntrada === 'Digite seu texto') {
         // Campo vazio, exibe mensagem de erro
@@ -114,6 +114,5 @@ document.addEventListener('DOMContentLoaded', () => {
     // Chama a função instrucaoCampoEntrada no evento DOMContentLoaded
     instrucaoCampoEntrada();
 });
-
 
 

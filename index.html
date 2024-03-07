@@ -5,7 +5,6 @@
     <title>Encrypter</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel href="https://fonts.adobe.com/fonts/cc-ultimatum-variable">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Handjet:wght@100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -45,11 +44,18 @@
                 <img id="pisca__alerta" src="assets/warning-icon.png" alt="ícone de alerta" class="imagem__alerta">
             </div>
 
+            <!--<div class="area__texto__saida">
+                <textarea id="textoSaida" readonly></textarea>
+                <p id="instrucaoNaSaida">salve o texto! </p>
+                <p id="instrucaoNaSaida2">Em um minuto, o texto original irá desaparecer </p>
+            </div> -->
+
             <div class="area__texto__saida">
                 <textarea id="textoSaida" readonly></textarea>
-                <p id="instrucaoNaSaida">você pode salvar o texto! </p>
-                <p id="instrucaoNaSaida2">Em um minuto, o texto original irá desaparecer </p>
+               
+                <p id="instrucaoNaSaida" class="instrucao">Você deve copiar o texto! <br> Em um 30 segundos, esta mensagem se auto-destruitrá!</p>
             </div>
+            
         </div>
 
         <div class="espaço__para__botoes" style="display: flex; justify-content: space-between;">

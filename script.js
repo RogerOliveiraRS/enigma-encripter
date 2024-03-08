@@ -77,7 +77,6 @@ function descriptografa() {
     document.getElementById('textoSaida').value = textoOriginal;
     document.getElementById('instrucaoNaSaida').style.display = 'none';
     resetEntrada();
-    
     // Chamando verificaCampos após desencriptar
     verificaCampos();
 }
@@ -86,11 +85,9 @@ function verificaCampos() {
     const textoNaEntrada = document.getElementById('textoEntrada').value;
     const textoNaSaida = document.getElementById('textoSaida').value;
     const instrucaoNaSaida = document.getElementById('instrucaoNaSaida');
-
     if (textoNaEntrada.trim() !== 'Digite seu texto' && textoNaSaida !== 'Você deve copiar o texto! Em 30 segundos, esta mensagem se auto-destruirá!') {
         // Exibe a instrução na saída
         instrucaoNaSaida.style.display = 'block';
-
         // Inicia um temporizador de 30 segundos
         setTimeout(() => {
             limparCampoEntrada();
@@ -109,7 +106,7 @@ function limparCampoEntrada() {
 }
 
 
-function copiaParaTransferir() {
+/*function copiaParaTransferir() {
     const textoNaSaida = document.getElementById('textoSaida').value;
     if (textoNaSaida) {
         navigator.clipboard.writeText(textoNaSaida);
@@ -119,7 +116,32 @@ function copiaParaTransferir() {
             navigator.clipboard.writeText(textoNaEntrada);
         }
     }
+} */
+
+function copiaParaTransferir() {
+    const textoNaEntrada = document.getElementById('textoEntrada').value;
+    if (textoNaEntrada !== 'Digite seu texto') {
+        const textoNaSaida = document.getElementById('textoSaida').value;
+        if (textoNaSaida) {
+            navigator.clipboard.writeText(textoNaSaida)
+                .then(() => console.log('Texto copiado com sucesso!'))
+                .catch(error => console.error('Erro ao copiar texto:', error));
+        } else {
+            if (textoNaEntrada) {
+                navigator.clipboard.writeText(textoNaEntrada)
+                    .then(() => console.log('Texto copiado com sucesso!'))
+                    .catch(error => console.error('Erro ao copiar texto:', error));
+            }
+        }
+    } else {
+        // Limpa o clipboard se a cópia for impedida
+        navigator.clipboard.writeText('')
+            .then(() => console.log('Clipboard limpo.'))
+            .catch(error => console.error('Erro ao limpar o clipboard:', error));
+    }
 }
+
+
 
 function resetEntrada() {
     clearTimeout(timeoutId);
@@ -147,17 +169,7 @@ document.getElementById('textoEntrada').addEventListener('click', function () {
 document.addEventListener('DOMContentLoaded', () => {
     resetSaida(); 
     document.getElementById('pisca__alerta').style.visibility = 'hidden';
-   /* document.getElementById('textoSaida').addEventListener('click', function () {
-        // Limpa o conteúdo do campo de saída
-        document.getElementById('textoSaida').value = '';
-    });*/
 
-    // Chama a função instrucaoCampoEntrada no evento DOMContentLoaded
-    /* Quando os campos de Entrada E de saída estiverem com textos 
-    E o texto na entrada for diferente de "Digite seu Texto" E o texto na saída 
-    for diferente de "Você deve copiar o texto!  Em um 30 segundos, esta mensagem se auto-destruitrá!" ('intrucaoNaSaida'), 
-    ENTãO a 'instrucaoNaSaida' é = 'block' E aciona um timer, que conta  30 segundos E DEPOIS  do tempo estabelido, as funções limparCampoEntrada() E   resetSaida são chamadas.
-   */
     instrucaoCampoEntrada();
 });
  

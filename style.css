@@ -71,7 +71,7 @@ padding-left: 1.5rem;
 
 
 textarea{
-    border: 1px solid #22D4FD;
+    border: 0.5px solid #22D4FD;
     width: 47.5rem;
     height: 45.5rem;
     text-align: center;
@@ -102,11 +102,21 @@ textarea{
     position: relative;
     color: #69FB16; /* Cor do texto */
 }
+.segundosRestantes {
+    color: #E5E5E5; /* Cor inicial dos segundos */
+}
+
+
+.segundosRestantes.red {
+    color: #FF7E07; /* Cor dos segundos quando o tempo restante é menor ou igual a 10 segundos */
+}
+
 
 
 .instrucaoNaSaida{
 color:#E5E5E5
 
 }
+
 
 

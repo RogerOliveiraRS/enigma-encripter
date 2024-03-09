@@ -21,48 +21,40 @@
         <img src="assets/cabecalho_wht.png" alt="Nome do produto" class="imagem__titulo">
     </header>
 
+<main>
+    <div class="mensagens__de__erro">
+        <div id="mensagens__de__erro"></div>
+    </div>
 
-    <main>
+    <div class="avisos__uteis">
+        <div class="alerta__autodestruicao"></div>
+        <div class="lembrete__salvar"></div>
+    </div>
 
-        <div class="mensagens__de__erro">
-            <div id="mensagens__de__erro"></div>
-        </div>
-
-        <div class="avisos__uteis">
-            <div class="alerta__autodestruicao"></div>
-            <div class="lembrete__salvar"></div>
-        </div>
-
-        <div class="entrada__e__saida__textos">
-            <div class="instrucao__e__entrada">
-                <div class="area__caixa__entrada">
-                    <textarea id="textoEntrada" class="digite__seu__texto">Digite seu texto</textarea>
-                </div>
+    <div class="entrada__e__saida__textos">
+        <div class="instrucao__e__entrada">
+            <div class="area__caixa__entrada">
+                <textarea id="textoEntrada" class="digite__seu__texto">Digite seu texto</textarea>
             </div>
-
-            <div>
-                <img id="pisca__alerta" src="assets/warning-icon.png" alt="ícone de alerta" class="imagem__alerta">
-            </div>
-
-            <!--<div class="area__texto__saida">
-                <textarea id="textoSaida" readonly></textarea>
-                <p id="instrucaoNaSaida">salve o texto! </p>
-                <p id="instrucaoNaSaida2">Em um minuto, o texto original irá desaparecer </p>
-            </div> -->
-
-            <div class="area__texto__saida">
-                <textarea id="textoSaida" readonly></textarea>
-               
-                <p id="instrucaoNaSaida" class="instrucao">Você deve copiar o texto! <br> Em um 30 segundos, esta mensagem se auto-destruitrá!</p>
-            </div>
-            
         </div>
 
-        <div class="espaço__para__botoes" style="display: flex; justify-content: space-between;">
-            <button onclick="criptografa()">Criptografar</button>
-            <button onclick="descriptografa()">Descriptografar</button>
-            <button onclick="copiaParaTransferir()">Copiar</button>
+        <div>
+            <img id="pisca__alerta" src="assets/warning-icon.png" alt="ícone de alerta" class="imagem__alerta">
         </div>
+
+
+        <div class="area__texto__saida">
+            <textarea id="textoSaida" readonly></textarea>               
+            <p id="instrucaoNaSaida" class="instrucao">Você deve copiar o texto! <br> Em  30 segundos, esta mensagem se auto-destruitrá!</p>
+        </div>
+        
+    </div>
+
+    <div class="espaço__para__botoes" style="display: flex; justify-content: space-between;">
+        <button onclick="criptografa()">Criptografar</button>
+        <button onclick="descriptografa()">Descriptografar</button>
+        <button onclick="copiaParaTransferir()">Copiar</button>
+    </div>
 
     </main>
 
@@ -74,5 +66,4 @@
 
 </body>
 
-</html>
-
+</html>                              

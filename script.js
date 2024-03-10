@@ -28,16 +28,26 @@ function limparCampoEntrada() {
 }
 
 
+
+
 document.getElementById('textoSaida').addEventListener('click', function () {
     const currentTime = new Date().getTime(); // Obtém o tempo atual
     if (currentTime - lastClickTime < intervaloDeClique) {
-        // Dois cliques rápidos dentro de 1 segundo, resete as áreas de saída e entrada
         limparCampoEntrada();
         resetSaida();
-        contadorCliques = 1; // Reinicia o contador
+        // Reinicia o contador
+        contadorCliques = 0;
+    } else {
+        // Se o intervalo for maior ou igual a 1 segundo, reinicie o temporizador
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => {
+            limparCampoEntrada();
+            resetSaida();
+        }, tempoContagemRegressiva);
     }
     lastClickTime = currentTime; // Atualiza o tempo do último clique
 });
+
 
 
 function resetSaida() {

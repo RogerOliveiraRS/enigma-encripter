@@ -30,13 +30,20 @@ function limparCampoEntrada() {
 
 
 
-document.getElementById('textoSaida').addEventListener('click', function () {
+document.getElementById('textoSaida').addEventListener('click', async function () {
     const currentTime = new Date().getTime(); // Obtém o tempo atual
     if (currentTime - lastClickTime < intervaloDeClique) {
         limparCampoEntrada();
         resetSaida();
         // Reinicia o contador
         contadorCliques = 0;
+
+        // Limpa o clipboard
+        try {
+            await navigator.clipboard.writeText(''); // Copia texto vazio para o clipboard
+        } catch (error) {
+            console.error('Erro ao limpar o clipboard:', error);
+        }
     } else {
         // Se o intervalo for maior ou igual a 1 segundo, reinicie o temporizador
         clearTimeout(timeoutId);
@@ -186,4 +193,3 @@ function copiaParaTransferir() {
     }
 }
       
-

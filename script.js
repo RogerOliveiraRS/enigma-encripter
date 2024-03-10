@@ -1,7 +1,9 @@
-let timeoutId;
+let timeoutId; // Variável para armazenar o ID do timeout
 let contadorCliques = 0;
 let lastClickTime = 0;
-let intervaloDeClique = 1000; // 1 segundo
+const intervaloDeClique = 1000; // 1 segundo
+const tempoContagemRegressiva = 30000; // 30 segundos
+
 
 function verificaCampos() {
     const textoNaEntrada = document.getElementById('textoEntrada').value;
@@ -25,21 +27,24 @@ function limparCampoEntrada() {
     document.getElementById('textoEntrada').value = '';
 }
 
+
 document.getElementById('textoSaida').addEventListener('click', function () {
-    let currentTime = new Date().getTime();
+    const currentTime = new Date().getTime(); // Obtém o tempo atual
     if (currentTime - lastClickTime < intervaloDeClique) {
-        // Dois cliques rápidos, resete as áreas de saída e entrada
+        // Dois cliques rápidos dentro de 1 segundo, resete as áreas de saída e entrada
         limparCampoEntrada();
         resetSaida();
-        contadorCliques = 0; // Reinicia o contador
+        contadorCliques = 1; // Reinicia o contador
     }
-    lastClickTime = currentTime;
+    lastClickTime = currentTime; // Atualiza o tempo do último clique
 });
+
 
 function resetSaida() {
     document.getElementById('textoSaida').value = '';
     document.getElementById('instrucaoNaSaida').style.display = 'none';
 }
+
 
 document.getElementById('textoEntrada').addEventListener('click', function () {
     limparCampoEntrada();

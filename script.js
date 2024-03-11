@@ -4,19 +4,13 @@ let lastClickTime = 0;
 const intervaloDeClique = 1000; // 1 segundo
 const tempoContagemRegressiva = 30000; // 30 segundos
 
-
-
-
 function verificaCampos() {
     const textoNaEntrada = document.getElementById('textoEntrada').value;
     const textoNaSaida = document.getElementById('textoSaida').value;
     const instrucaoNaSaida = document.getElementById('instrucaoNaSaida');
-
     if (textoNaEntrada.trim() !== 'Digite seu texto' && textoNaSaida !== 'Você deve copiar o texto! Em 30 segundos, esta mensagem se auto-destruirá!') {
         // Exibe a instrução na saída
         instrucaoNaSaida.style.display = 'block';
-        
-
         // Reinicia o temporizador com 30 segundos
         clearTimeout(timeoutId);
         timeoutId = setTimeout(() => {
@@ -31,8 +25,6 @@ function limparCampoEntrada() {
 }
 
 
-
-
 document.getElementById('textoSaida').addEventListener('click', async function () {
     const currentTime = new Date().getTime(); // Obtém o tempo atual
     if (currentTime - lastClickTime < intervaloDeClique) {
@@ -41,7 +33,6 @@ document.getElementById('textoSaida').addEventListener('click', async function (
         location.reload();
   // Reinicia o contador
         contadorCliques = 0;
-
         // Limpa o clipboard
         try {
             await navigator.clipboard.writeText(''); // Copia texto vazio para o clipboard
@@ -59,16 +50,11 @@ document.getElementById('textoSaida').addEventListener('click', async function (
     lastClickTime = currentTime; // Atualiza o tempo do último clique
 });
 
-
-
-
 function resetSaida() {
     document.getElementById('textoSaida').value = '';
     document.getElementById('instrucaoNaSaida').style.display = 'none';
 
 }
-
-
 document.getElementById('textoEntrada').addEventListener('click', function () {
     limparCampoEntrada();
     resetMensagemErro();
@@ -130,8 +116,7 @@ function encripta() {
 }
 
 function descriptografa() {
-    const textoNaEntrada = document.getElementById('textoEntrada').value;
-    
+    const textoNaEntrada = document.getElementById('textoEntrada').value;    
     if (textoNaEntrada.trim() === '' || textoNaEntrada === 'Digite seu texto') {
         exibirMensagemErro('Você primeiro precisa digitar algo.');
         resetSaida();
@@ -151,8 +136,6 @@ function descriptografa() {
         verificaCampos();
     }
 }
-
-
 
 function ocultarMensagemErro() {
     document.getElementById('mensagens__de__erro').style.visibility = 'hidden';

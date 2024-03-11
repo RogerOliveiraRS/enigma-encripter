@@ -5,6 +5,8 @@ const intervaloDeClique = 1000; // 1 segundo
 const tempoContagemRegressiva = 30000; // 30 segundos
 
 
+
+
 function verificaCampos() {
     const textoNaEntrada = document.getElementById('textoEntrada').value;
     const textoNaSaida = document.getElementById('textoSaida').value;
@@ -13,6 +15,7 @@ function verificaCampos() {
     if (textoNaEntrada.trim() !== 'Digite seu texto' && textoNaSaida !== 'Você deve copiar o texto! Em 30 segundos, esta mensagem se auto-destruirá!') {
         // Exibe a instrução na saída
         instrucaoNaSaida.style.display = 'block';
+        
 
         // Reinicia o temporizador com 30 segundos
         clearTimeout(timeoutId);
@@ -35,7 +38,8 @@ document.getElementById('textoSaida').addEventListener('click', async function (
     if (currentTime - lastClickTime < intervaloDeClique) {
         limparCampoEntrada();
         resetSaida();
-        // Reinicia o contador
+        location.reload();
+  // Reinicia o contador
         contadorCliques = 0;
 
         // Limpa o clipboard
@@ -57,9 +61,11 @@ document.getElementById('textoSaida').addEventListener('click', async function (
 
 
 
+
 function resetSaida() {
     document.getElementById('textoSaida').value = '';
     document.getElementById('instrucaoNaSaida').style.display = 'none';
+
 }
 
 

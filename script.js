@@ -4,6 +4,9 @@ let lastClickTime = 0;
 const intervaloDeClique = 1000; // 1 segundo
 const tempoContagemRegressiva = 30000; // 30 segundos
 
+
+
+
 function verificaCampos() {
     const textoNaEntrada = document.getElementById('textoEntrada').value;
     const textoNaSaida = document.getElementById('textoSaida').value;
@@ -11,6 +14,8 @@ function verificaCampos() {
     if (textoNaEntrada.trim() !== 'Digite seu texto' && textoNaSaida !== 'Você deve copiar o texto! Em 30 segundos, esta mensagem se auto-destruirá!') {
         // Exibe a instrução na saída
         instrucaoNaSaida.style.display = 'block';
+
+
         // Reinicia o temporizador com 30 segundos
         clearTimeout(timeoutId);
         timeoutId = setTimeout(() => {
@@ -19,20 +24,19 @@ function verificaCampos() {
         }, 30000);
     }
 }
-
 function limparCampoEntrada() {
     document.getElementById('textoEntrada').value = '';
 }
-
-
 document.getElementById('textoSaida').addEventListener('click', async function () {
     const currentTime = new Date().getTime(); // Obtém o tempo atual
     if (currentTime - lastClickTime < intervaloDeClique) {
         limparCampoEntrada();
         resetSaida();
+        // Reinicia o contador
         location.reload();
   // Reinicia o contador
         contadorCliques = 0;
+
         // Limpa o clipboard
         try {
             await navigator.clipboard.writeText(''); // Copia texto vazio para o clipboard
@@ -50,47 +54,46 @@ document.getElementById('textoSaida').addEventListener('click', async function (
     lastClickTime = currentTime; // Atualiza o tempo do último clique
 });
 
+
+
+
 function resetSaida() {
     document.getElementById('textoSaida').value = '';
     document.getElementById('instrucaoNaSaida').style.display = 'none';
 
 }
+
+
 document.getElementById('textoEntrada').addEventListener('click', function () {
     limparCampoEntrada();
     resetMensagemErro();
 });
-
 document.addEventListener('DOMContentLoaded', () => {
     resetSaida();
 });
-
 function resetMensagemErro() {
     document.getElementById('mensagens__de__erro').textContent = '';
     document.getElementById('mensagens__de__erro').style.visibility = 'hidden';
     document.getElementById('pisca__alerta').style.visibility = 'hidden';
 }
-
 function exibirMensagemErro(mensagem) {
     const mensagemDeErro = document.getElementById('mensagens__de__erro');
     mensagemDeErro.textContent = mensagem;
     mensagemDeErro.style.visibility = 'visible';
     document.getElementById('pisca__alerta').style.visibility = 'visible';
 }
-
 function instrucaoCampoEntrada() {
     const textoNaEntrada = document.getElementById('textoEntrada').value;
     const instruction = document.getElementById('instrucaoEntrada');
-    if (textoNaEntrada === '' || textoNaEntrada === 'Digite seu texto') {
+    if (textoNaEntrada === '' || textoNaEntrada === 'Digite seu texto, com palavra ou texto contínuo, somente em minúsculas e sem caracteres especiais.Digite seu texto') {
         instruction.style.display = 'block';
     } else {
         instruction.style.display = 'none';
     }
 }
-
 function criptografa() {
     const textoNaEntrada = document.getElementById('textoEntrada').value;
-
-    if (textoNaEntrada.trim() === '' || textoNaEntrada === 'Digite seu texto') {
+    if (textoNaEntrada.trim() === '' || textoNaEntrada === 'Digite seu texto, com palavra ou texto contínuo, somente em minúsculas e sem caracteres especiais.') {
         exibirMensagemErro('Você primeiro precisa digitar algo.');
         resetSaida();
     } else if (!/^[a-z]+$/.test(textoNaEntrada)) {
@@ -101,7 +104,6 @@ function criptografa() {
         encripta();
     }
 }
-
 function encripta() {
     const textoNaEntrada = document.getElementById('textoEntrada').value;
     const textoCriptografado = textoNaEntrada.replace(/a/g, 'ai')
@@ -114,10 +116,10 @@ function encripta() {
     resetEntrada();
     verificaCampos();
 }
-
 function descriptografa() {
-    const textoNaEntrada = document.getElementById('textoEntrada').value;    
-    if (textoNaEntrada.trim() === '' || textoNaEntrada === 'Digite seu texto') {
+    const textoNaEntrada = document.getElementById('textoEntrada').value;
+    
+    if (textoNaEntrada.trim() === '' || textoNaEntrada === 'Digite seu texto, com palavra ou texto contínuo, somente em minúsculas e sem caracteres especiais.') {
         exibirMensagemErro('Você primeiro precisa digitar algo.');
         resetSaida();
     } else if (!/^[a-z]+$/.test(textoNaEntrada)) {
@@ -136,33 +138,28 @@ function descriptografa() {
         verificaCampos();
     }
 }
-
 function ocultarMensagemErro() {
     document.getElementById('mensagens__de__erro').style.visibility = 'hidden';
     document.getElementById('pisca__alerta').style.visibility = 'hidden';
 }
-
 function resetEntrada() {
     clearTimeout(timeoutId);
     timeoutId = setTimeout(() => {
         document.getElementById('textoEntrada').value = '';
     }, 30000);
 }
-
 document.getElementById('textoEntrada').addEventListener('click', function () {
     limparCampoEntrada();
     resetMensagemErro();
 });
-
 document.addEventListener('DOMContentLoaded', () => {
     resetSaida();
     document.getElementById('pisca__alerta').style.visibility = 'hidden';
     instrucaoCampoEntrada();
 });
-
 function copiaParaTransferir() {
     const textoNaEntrada = document.getElementById('textoEntrada').value;
-    if (textoNaEntrada !== 'Digite seu texto') {
+    if (textoNaEntrada !== 'Digite seu texto, com palavra ou texto contínuo, somente em minúsculas e sem caracteres especiais.') {
         const textoNaSaida = document.getElementById('textoSaida').value;
         if (textoNaSaida) {
             navigator.clipboard.writeText(textoNaSaida)
@@ -181,4 +178,3 @@ function copiaParaTransferir() {
             .catch(error => console.error('Erro ao limpar o clipboard:', error));
     }
 }
-      

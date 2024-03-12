@@ -1,9 +1,11 @@
+header{}
+
+
 body {
     margin: 0;
     padding: 0;
 }
     
-
 .background__container {
     position: fixed;
     top: 0;
@@ -16,16 +18,11 @@ body {
     filter: brightness(0.35);
     z-index: -1; 
 }
-
-
 .cabecalho{
     display: flex;
     flex-direction: row;
     align-items: center;
 }
-
-
-
 .imagem__logo{
         width: 2.5rem;
         height: auto;
@@ -33,7 +30,6 @@ body {
         opacity: 1; /* Define a opacidade da imagem como 100% */
         padding: 3rem 15rem 0 5rem;
     }
-
  .imagem__titulo{
     width: 46rem;
     height: auto;
@@ -41,17 +37,21 @@ body {
     filter: brightness(1); /* Mantém a imagem com o brilho original (100%) */
     opacity: 1; /* Define a opacidade da imagem como 100% */
  } 
- 
+ main{
+    padding-top: 2rem;
+    display:flex;
+    flex-direction: column;
+ }
  #mensagens__de__erro {
+    padding-left: 5.6%;
+    font-size: large;
     color: #FF7E07; /* Cor laranja para as mensagens de erro */
     height: 1.5rem; /* Altura fixa para evitar movimento dos elementos abaixo */
     margin-top: 0.5rem; /* Espaçamento superior para separar as mensagens de erro dos elementos acima */
     visibility: hidden; /* Inicialmente oculta */
 }
-
-
     .entrada__e__saida__textos {
-        padding: 4%;
+        padding: 0% 4% 2% 4%;
         display: flex; 
         flex-direction: row;/* Exibe os elementos dentro do <main> lado a lado */
         justify-content: space-between; /* Espaçamento igual entre os elementos */
@@ -59,7 +59,6 @@ body {
 
     .textoEntrada::placeholder{
         font-size: 1.8rem;
-
     }
 
 .imagem__alerta{
@@ -69,12 +68,12 @@ padding-right: 1.5rem;
 padding-left: 1.5rem;
 }
 
-
 textarea{
-    border: 0.5px solid #22D4FD;
+    border: 1px solid #22D4FD;
+    padding-left: 2rem;
     width: 47.5rem;
     height: 45.5rem;
-    text-align: center;
+    text-align: left;
     border-radius: 1.8rem;
     font-size: 1.5rem;
     color: #69FB16; /* Cor do texto */
@@ -82,33 +81,96 @@ textarea{
     background-color: rgba(13, 13, 13, 0.6); /* Cor do fundo com 60% de opacidade */
 }
 
+.instrucao {
+    font-size: 1rem; /* Tamanho da fonte menor */
+}
 
 
 .texto__instrucao__entrada{
-    color: #E5E5E5;
+   color: #E5E5E5;
 }
 
-
+.instrucao {
+    position: absolute;
+    bottom:1rem; /* Ajuste a posição vertical conforme necessário */
+    left: 1rem; /* Ajuste a posição horizontal conforme necessário */
+    margin: 0;
+    font-size: 20px; /* Ajuste o tamanho da fonte conforme necessário */
+    pointer-events: none; /* Evita que a instrução seja clicável */
+    color:#E5E5E5; /* Define a cor do texto da instrução */
+}
 
 .area__texto__saida {
-    position: relative;
+   
     color: #69FB16; /* Cor do texto */
+  
 }
-.segundosRestantes {
-    color: #E5E5E5; /* Cor inicial dos segundos */
-}
-
-
-.segundosRestantes.red {
-    color: #FF7E07; /* Cor dos segundos quando o tempo restante é menor ou igual a 10 segundos */
-}
-
 
 
 .instrucaoNaSaida{
 color:#E5E5E5
+}
 
+.espaco__para__botoes {
+    padding: 0rem 5rem 3rem 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+button {
+    font-size: larger;
+    width: 240px;
+    height: 45px;
+    border-radius: 6px;
+    color: #FF7E07 ;
+    border: 1px solid #FF7E07; 
+    background-color:#08070B; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease;
+
+
+}
+
+.botao__criptografa {
+   
+}
+
+.botao__descriptografa {
+    
+}
+
+.botao__copia {
+   
+}
+
+footer{
+    font-size: larger;
+  
 }
 
 
 
+
+
+
+
+
+
+
+footer{
+    display:flex;
+    flex-direction: row; 
+    padding:0;   
+    background-color: transparent;
+    text-align: center;    
+    bottom:50; 
+}
+
+.texto__rodape {
+    padding-left: 4%;
+    font-family:;   
+    font-size: 1.25; 
+    color:#E5E5E5;
+}

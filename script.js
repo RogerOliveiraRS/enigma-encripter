@@ -11,7 +11,7 @@ function verificaCampos() {
     const textoNaEntrada = document.getElementById('textoEntrada').value;
     const textoNaSaida = document.getElementById('textoSaida').value;
     const instrucaoNaSaida = document.getElementById('instrucaoNaSaida');
-    if (textoNaEntrada.trim() !== 'Digite seu texto' && textoNaSaida !== 'Você deve copiar o texto! Em 30 segundos, esta mensagem se auto-destruirá!') {
+    if (textoNaEntrada.trim() !== 'Digite seu texto' && textoNaSaida !== 'Você deve copiar o texto! Em 30 segundos, esta mensagem se AUTO-DESTRUIRÁ!') {
         // Exibe a instrução na saída
         instrucaoNaSaida.style.display = 'block';
 

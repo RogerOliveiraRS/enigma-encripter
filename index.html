@@ -1,3 +1,4 @@
+<!--
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -58,7 +59,61 @@
 </body>
 
 </html>  
-                                
+-->
+ <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Encrypter</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Handjet:wght@100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background__container"></div>
+    <header class="cabecalho">
+        <img src="assets/logo_alura_branco.png" alt="Logo" class="imagem__logo">
+        <img src="assets/cabecalho_wht.png" alt="Nome do produto" class="imagem__titulo">
+    </header>
+<main>
+    <div class="mensagens__de__erro">
+        <div id="mensagens__de__erro"></div>
+    </div>
+    <div class="avisos__uteis">
+        <div class="alerta__autodestruicao"></div>
+        <div class="lembrete__salvar"></div>
+    </div>
+    <div class="entrada__e__saida__textos">
+        <div class="instrucao__e__entrada">
+            <div class="area__caixa__entrada">
+                <textarea id="textoEntrada" class="digite__seu__texto">Digite seu texto, com palavra ou texto contínuo, somente em minúsculas e sem caracteres especiais.</textarea>
+            </div>
+        </div>
+        <div>
+            <img id="pisca__alerta" src="assets/warning-icon.png" alt="ícone de alerta" class="imagem__alerta">
+        </div>
+        <div class="area__texto__saida">
+            <textarea id="textoSaida" readonly></textarea>
+            <div id="instrucaoContainer">
+                <p id="instrucaoNaSaida" class="instrucao">Você deve copiar o texto! <br> Em <span id="tempoRestante">30</span> segundos, esta mensagem se AUTO-DESTRUIRÁ!</p>
+            </div>
+        </div>
+    </div>
+</main>
+<div class="espaco__para__botoes">
+    <div class="botao__criptografa"><button onclick="criptografa()">Criptografar</button></div>
+    <div class="botao__descriptografa"><button onclick="descriptografa()">Descriptografar</button></div>
+    <div class="botao__copia"><button onclick="copiaParaTransferir()">copiar</button></div>      
+</div> 
+<footer>
+    <p class="texto__rodape">Desenvolvido por Roger Oliveira Nunes Gomes para Alura/Oracle - Programa One - rogeroliveiralouvor@gmail.com</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
+                               
                                 
                                                         
 

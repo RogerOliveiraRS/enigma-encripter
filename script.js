@@ -4,9 +4,6 @@ let lastClickTime = 0;
 const intervaloDeClique = 1000; // 1 segundo
 const tempoContagemRegressiva = 30000; // 30 segundos
 
-
-
-
 function verificaCampos() {
     const textoNaEntrada = document.getElementById('textoEntrada').value;
     const textoNaSaida = document.getElementById('textoSaida').value;
@@ -23,7 +20,8 @@ function verificaCampos() {
             resetSaida();
         }, 30000);
     }
-}
+} 
+
 function limparCampoEntrada() {
     document.getElementById('textoEntrada').value = '';
 }
@@ -53,8 +51,6 @@ document.getElementById('textoSaida').addEventListener('click', async function (
     }
     lastClickTime = currentTime; // Atualiza o tempo do último clique
 });
-
-
 
 
 function resetSaida() {
@@ -113,8 +109,10 @@ function encripta() {
         .replace(/u/g, 'ufat');
     document.getElementById('textoSaida').value = textoCriptografado;
     document.getElementById('instrucaoNaSaida').style.display = 'none';
+
     resetEntrada();
     verificaCampos();
+  
 }
 function descriptografa() {
     const textoNaEntrada = document.getElementById('textoEntrada').value;
@@ -178,3 +176,4 @@ function copiaParaTransferir() {
             .catch(error => console.error('Erro ao limpar o clipboard:', error));
     }
 }
+

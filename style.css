@@ -13,7 +13,7 @@ body {
     background: url(assets/resist6.jpeg);
     background-size: cover;
     background-position: center;
-    filter: brightness(0.35);
+    filter: brightness(0.40);
     z-index: -1; 
 }
 .cabecalho{
@@ -50,6 +50,18 @@ main{
     visibility: hidden;
 }
 
+.instrucao {
+    position: absolute;
+    bottom: 2.25rem;
+    left: 1rem;
+    margin: 0;
+    font-size: 1rem;
+    pointer-events: none;
+    color: #E5E5E5;
+    display: block; /* Agora a instrução será exibida por padrão */
+}
+
+
 
 .entrada__e__saida__textos {
     padding: 0% 4% 2% 4%;
@@ -67,7 +79,7 @@ main{
 }
 
 textarea {
-    border: 1px solid #22D4FD;
+    border: 1px solid #a8e8f7;
     padding-left: 2rem;
     padding-top: 1rem;
     width: 47.5rem;
@@ -84,22 +96,42 @@ textarea {
    color: #E5E5E5;
 }
 
+/*.area__texto__saida {  
+    color: #69FB16; 
+    position: relative; 
+}    */
+
 .area__texto__saida {  
     color: #69FB16; /* Cor do texto */
     position: relative; 
+    padding: 0;
 }
+
+.segundos{
+
+    animation: blink 1s step-end infinite;
+    }
+    
+    @keyframes blink {
+        50% {
+            visibility: hidden;
+        }
+    }
+
 
 
 
 .instrucao {
     position: absolute;
-    bottom: 2.25rem; /* Ajuste a posição vertical conforme necessário */
+    bottom: 1rem; /* Ajuste a posição vertical conforme necessário */
     left: 1rem; /* Ajuste a posição horizontal conforme necessário */
     margin: 0;
     font-size: 1rem;
     pointer-events: none; /* Evita que a instrução seja clicável */
-    color:#E5E5E5; /* Define a cor do texto da instrução */
+    color:#fa9a2c; /* Define a cor do texto da instrução */
 }
+
+
 
 .espaco__para__botoes {
    /* padding: 0rem 5rem 1.8rem 5rem;*/
@@ -110,11 +142,11 @@ textarea {
 }
 
 button {
-    font-size: larger;
-    width: 240px;
-    height: 45px;
+    font-size: 25px;
+    width: 288px;
+    height: 54px;
     border-radius: 6px;
-    color: #FF7E07 ;
+    color: #f1a64f;
     border: 1px solid #FF7E07; 
     background-color:#08070B; 
     cursor: pointer; 
@@ -123,14 +155,14 @@ button {
 
 
 .botao__criptografa {
-    padding-left: 11rem;
+    padding-left: 8.5rem;
 
 }
 .botao__descriptografa {
     padding-left: 4rem;
 }
 .botao__copia {
-    padding-left: 46rem;
+    padding-left: 41rem;
 } 
 
 footer {

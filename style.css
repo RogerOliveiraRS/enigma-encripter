@@ -71,10 +71,7 @@ main{
     justify-content: space-between;
 }
 
-.instrucao__e__entrada{
 
-
-}
 
 .imagem__alerta{
     margin: 2%;
@@ -225,8 +222,12 @@ footer {
         margin-top: 0rem;
         margin-bottom: 0rem;
         visibility: hidden;
+    }
 
-
+    .imagem__alerta2 {
+        width: 16px; 
+        height: 16px; 
+      
     }
 
 
@@ -290,18 +291,20 @@ button {
 
 .botao__copia {
     padding: 0;
-
 } 
 
 
-
-
-
-
-
-
-
-
-
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

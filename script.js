@@ -76,17 +76,16 @@ function exibirMensagemErro(mensagem) {
     const mensagemDeErro = document.getElementById('mensagens__de__erro');
     mensagemDeErro.textContent = mensagem;
     mensagemDeErro.style.visibility = 'visible';
-    document.getElementById('pisca__alerta').style.visibility = 'visible';
-}
-function instrucaoCampoEntrada() {
-    const textoNaEntrada = document.getElementById('textoEntrada').value;
-    const instruction = document.getElementById('instrucaoEntrada');
-    if (textoNaEntrada === '' || textoNaEntrada === 'Digite seu texto, com palavra ou texto contínuo, somente em minúsculas e sem caracteres especiais.Digite seu texto') {
-        instruction.style.display = 'block';
+    
+    const screenWidth = window.innerWidth;
+    if (screenWidth >= 375) { // Defina o limite de largura aqui
+        document.getElementById('pisca__alerta').style.visibility = 'visible';
     } else {
-        instruction.style.display = 'none';
+        document.getElementById('pisca__alerta').style.visibility = 'hidden';
     }
 }
+
+
 function criptografa() {
     const textoNaEntrada = document.getElementById('textoEntrada').value;
     if (textoNaEntrada.trim() === '' || textoNaEntrada === 'Digite seu texto, com palavra ou texto contínuo, somente em minúsculas e sem caracteres especiais.') {
@@ -100,6 +99,8 @@ function criptografa() {
         encripta();
     }
 }
+
+
 function encripta() {
     const textoNaEntrada = document.getElementById('textoEntrada').value;
     const textoCriptografado = textoNaEntrada.replace(/a/g, 'ai')
@@ -114,6 +115,7 @@ function encripta() {
     verificaCampos();
   
 }
+
 function descriptografa() {
     const textoNaEntrada = document.getElementById('textoEntrada').value;
     
@@ -136,6 +138,10 @@ function descriptografa() {
         verificaCampos();
     }
 }
+
+
+
+
 function ocultarMensagemErro() {
     document.getElementById('mensagens__de__erro').style.visibility = 'hidden';
     document.getElementById('pisca__alerta').style.visibility = 'hidden';
@@ -176,4 +182,3 @@ function copiaParaTransferir() {
             .catch(error => console.error('Erro ao limpar o clipboard:', error));
     }
 }
-

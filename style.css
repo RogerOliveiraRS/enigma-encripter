@@ -125,7 +125,7 @@ textarea {
 }
 
 .espaco__para__botoes {
-    /* padding: 0rem 5rem 1.8rem 5rem;*/
+padding-top: 3rem;
     display: flex;
     flex-direction: row;
     /*justify-content: space-around;*/
@@ -145,11 +145,11 @@ button {
 }
 
 .botao__criptografa {
-    padding-left: 8.5rem;
+    padding-left: 8rem;
 
 }
 .botao__descriptografa {
-    padding-left: 4rem;
+    padding-left: 6rem;
 }
 .botao__copia {
     padding-left: 41rem;

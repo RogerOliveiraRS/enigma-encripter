@@ -136,7 +136,7 @@ button {
     font-size: 25px;
     width: 288px;
     height: 54px;
-    border-radius: 6px;
+    border-radius: 10px;
     color: #f1a64f;
     border: 1px solid #FF7E07; 
     background-color:#08070B; 
@@ -254,13 +254,17 @@ footer {
         width: 320px;
         height: 180px;
         text-align: left;
-        border-radius: .5rem;
-        font-size: 0.8rem;
+        border-radius: 0;
+        font-size: 1rem;
         color: #69FB16;
         text-decoration: none;
         background-color: rgba(13, 13, 13, 0.6);
     }
 
+    .instrucao{
+        font-size: 12px;
+
+    }
 
     .espaco__para__botoes {
         padding-top: 1rem;
@@ -305,7 +309,7 @@ footer {
      
      }
 .texto__rodape{
-    font-size: 12px;
+    font-size: 14px;
     padding-right: 3%;
     justify-content: center;
 

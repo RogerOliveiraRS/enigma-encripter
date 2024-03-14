@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@200;300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
-/* Definindo variáveis */
+
 
 body {
     margin: 0;
@@ -170,9 +170,7 @@ footer {
     color: #E5E5E5;
 }
 
-
-@media(max-width:375px){
-
+@media (min-width: 345px) and (max-width: 470px) {
     .background__container {
         position: fixed;
         top: 0;
@@ -182,41 +180,48 @@ footer {
         background: url(assets/resist6.jpeg);
         background-size: cover;
         background-position: center;
-        filter: brightness(0.40);
+        filter: brightness(.60);
         z-index: -1; 
     }
 
-    .cabecalho{
+
+    .cabecalho {
         width: auto;
         display: flex;
         flex-direction: row;
-      
-        padding-top: 0rem;}
+        padding-right: 0rem;
+        padding-top: 0rem;
+        padding-bottom: 1rem;
+        padding-left: 2rem;
+    }
 
-    .imagem__logo{
-        width: 2rem;
+    .imagem__logo {
+        width: 0.75rem;
         height: auto;
         filter: brightness(1);
         opacity: 1;
-        padding: 2.5rem 1rem  1rem;
+        padding: 2rem 1rem 1rem 0rem;
     }
-    .imagem__titulo{
-        width: 20rem;
+
+    .imagem__titulo {
+        width: 18rem;
         height: 1rem;
-        padding-top: 2.8rem;
+        padding-top: 1rem;      
         filter: brightness(1);
+        filter: contrast(150%) saturate(150%);
         opacity: 1;
     } 
 
-    main{
-      
+    main {      
         display:flex;
         flex-direction: column;
+   
     }
 
-    .mensagens__de__erro{
-        padding-left: 2rem;
-        font-size: 13px;
+    .mensagens__de__erro {
+        background-color:#08070B; 
+        padding-left: 1.3rem;
+        font-size: 12px;
         color: #FF7E07;
         height: 1.5rem;
         margin-top: 0rem;
@@ -224,87 +229,86 @@ footer {
         visibility: hidden;
     }
 
+    .imagem__alerta {
+        display: none;
+    }
+
     .imagem__alerta2 {
         width: 16px; 
-        height: 16px; 
-      
+        height: 16px;       
+    }
+
+    .entrada__e__saida__textos {
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
+
+
+
+        padding: 1.5rem 2rem 0rem 2rem;
+    }
+
+    textarea {
+        border: 1px solid #a8e8f7;
+        padding-right: 2rem;
+        width: 320px;
+        height: 180px;
+        text-align: left;
+        border-radius: .5rem;
+        font-size: 0.8rem;
+        color: #69FB16;
+        text-decoration: none;
+        background-color: rgba(13, 13, 13, 0.6);
     }
 
 
-    .entrada__e__saida__textos {
+    .espaco__para__botoes {
+        padding-top: 1rem;
+        padding-right: 0.5rem;
+        padding-bottom: 0%;    
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-around;
         align-items: center;
-        width: 100%;
-        margin: 0;
-        padding: 1rem;
-        border: 0;
-   }
+    }
 
-   textarea {
-    border: 1px solid #a8e8f7;
- 
+    button {
+        font-size: 14px; 
+        margin: 0.rem;
+        width: 110px;
+        height: 30px;
+        border-radius: 6px;
+        color: #f1a64f;
+        border: 1px solid #FF7E07; 
+        background-color:#08070B; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease;
+    }
 
-    width: 340px;
-    height: 200px;
-    text-align: left;
-    border-radius: 1.8rem;
-    font-size: 1.25rem;
-    color: #69FB16;
-    text-decoration: none;
-    background-color: rgba(13, 13, 13, 0.6);
-}
+    .botao__criptografa {
+        padding-left: 0.5rem;
+       
+    }
 
+    .botao__descriptografa {
+        width: 120;
+        padding: 0;
+    }
 
-.espaco__para__botoes {
-     padding-top: 2rem;
+    .botao__copia {
+        padding: 0;
+    } 
+    
+    footer{
+        padding-top: 1rem;
+        padding-left: 1.1rem;
      
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-
-;
-}
-
-button {
-    font-size: 14px;
-  
-    width: 110px;
-    height: 30px;
-    border-radius: 6px;
-    color: #f1a64f;
-    border: 1px solid #FF7E07; 
-    background-color:#08070B; 
-    cursor: pointer; 
-    transition: background-color 0.3s ease;
-}
-
-.botao__criptografa {
-  padding-left: 30px;
-}
-
-.botao__descriptografa {
-    width: 120;
-    padding: 0;
-}
-
-.botao__copia {
-    padding: 0;
-} 
-
+     }
+.texto__rodape{
+    font-size: 12px;
+    padding-right: 3%;
+    justify-content: center;
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
+}

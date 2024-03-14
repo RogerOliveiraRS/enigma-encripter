@@ -92,7 +92,7 @@ function criptografa() {
         exibirMensagemErro('Você primeiro precisa digitar algo.');
         resetSaida();
     } else if (!/^[a-z]+$/.test(textoNaEntrada)) {
-        exibirMensagemErro('Digite somente letras minúsculas, palavra ou texto contínuo, sem espaços, acentuação ou qualquer outro caractere.');
+        exibirMensagemErro('Digite letras minúsculas, sem espaços, acentuação ou qualquer outro caractere.');
         resetSaida();
     } else {
         ocultarMensagemErro();

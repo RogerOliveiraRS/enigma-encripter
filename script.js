@@ -4,6 +4,19 @@ let lastClickTime = 0;
 const intervaloDeClique = 1000; // 1 segundo
 const tempoContagemRegressiva = 30000; // 30 segundos
 
+// Função para fazer um elemento piscar
+function fazerPiscar(elemento) {
+    setInterval(() => {
+        elemento.style.visibility = (elemento.style.visibility === 'hidden') ? 'visible' : 'hidden';
+    }, 500); // Intervalo de 500 milissegundos (0.5 segundos)
+}
+
+// Obtém todos os elementos <span> e faz cada um piscar
+document.querySelectorAll('span').forEach(span => {
+    fazerPiscar(span);
+});
+
+
 function verificaCampos() {
     const textoNaEntrada = document.getElementById('textoEntrada').value;
     const textoNaSaida = document.getElementById('textoSaida').value;
@@ -181,4 +194,4 @@ function copiaParaTransferir() {
             .then(() => console.log('Clipboard limpo.'))
             .catch(error => console.error('Erro ao limpar o clipboard:', error));
     }
-}
+}   

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -18,9 +19,6 @@
         <img src="assets/cabecalho_wht.png" alt="Nome do produto" class="imagem__titulo">
     </header>
 
-    
-    
-
 <main>
     <div class="mensagens__de__erro">
         <div id="mensagens__de__erro"></div>
@@ -30,7 +28,7 @@
 
         <div class="instrucao__e__entrada">       
             <div class="area__caixa__entrada">
-                <textarea id="textoEntrada" class="digite__seu__texto">Digite seu texto, com palavra ou texto contínuo, somente em minúsculas e sem caracteres especiais.</textarea>
+                <textarea id="textoEntrada" class="textarea entrada">Digite seu texto, com palavra ou texto contínuo, somente em minúsculas e sem caracteres especiais.</textarea>
             </div>
         </div>
 
@@ -38,30 +36,36 @@
             <img id="pisca__alerta" src="assets/warning-icon.png" alt="ícone de alerta" class="imagem__alerta">
         </div>
         
-        <div class="area__texto__saida">
-            <textarea id="textoSaida" readonly></textarea>               
-                    <p id="instrucaoNaSaida" class="instrucao"> <span class="segundos">COPIE!&nbsp;&nbsp;&nbsp;&nbsp;AUTO-DESTRUIÇÃO EM 30s !</span><br>
-                        <br>
-                    1 CLIQUE: +30s.<br>
-                    <br><span class="violacao">VIOLAÇÃO DE PERÍMETRO, EMERGÊNCIA: 2 CLIQUES RÁPIDOS!</span> </p>             
+        <div class="area__caixa__saida">
+
+            <textarea id="textoSaida" readonly class="textarea saida"></textarea>
+                           
+            <div id="instrucaoNaSaida" class="instrucao">
+                <div class="auto__destroi">
+                    <span class="segundos">COPIE OU MEMORIZE,&nbsp;&nbsp;AUTO-DESTRUIÇÃO EM 60 SEGUNDOS !</span><br>
+                </div>
+                <div class="mais__tempo">
+                    <span class="soma__tempo">1 CLIQUE APENAS PARA MAIS 30s !</span>
+
+                </div>
+                <div class="violado__perimetro">
+                    <span class="violacao">VIOLAÇÃO DE PERÍMETRO, EMERGÊNCIA: 2 CLIQUES RÁPIDOS!</span>
+                </div>
+            </div>
         </div>
     </div>
+    <div class="espaco__para__botoes">
+        <div class="botao__criptografa"><button onclick="criptografa()">Criptografar</button></div>
+        <div class="botao__descriptografa"><button onclick="descriptografa()">Descriptografar</button></div>
+        <div class="botao__copia"><button onclick="copiaParaTransferir()">copiar</button></div>      
+    </div> 
+
 </main>
 
-<div class="espaco__para__botoes">
-    <div class="botao__criptografa"><button onclick="criptografa()">Criptografar</button></div>
-    <div class="botao__descriptografa"><button onclick="descriptografa()">Descriptografar</button></div>
-    <div class="botao__copia"><button onclick="copiaParaTransferir()">copiar</button></div>      
-</div> 
+
 <footer>
     <p class="texto__rodape">Desenvolvido por Roger Oliveira Nunes Gomes para Alura/Oracle - Programa One - rogeroliveiralouvor@gmail.com</p>
 </footer>
 <script src="script.js"></script>
 </body>
 </html>
-                   
-                               
-                                
-                                                        
-
-

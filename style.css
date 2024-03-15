@@ -1,12 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@200;300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
 
-
 body {
     margin: 0;
     padding: 0;
 }
-    
+
 .background__container {
     position: fixed;
     top: 0;
@@ -19,32 +18,39 @@ body {
     filter: brightness(0.40);
     z-index: -1; 
 }
-.cabecalho{
+
+.cabecalho {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
-.imagem__logo{
+
+.imagem__logo {
     width: 2.5rem;
     height: auto;
     filter: brightness(1);
     opacity: 1;
     padding: 3rem 15rem 0 5rem;
 }
-.imagem__titulo{
+
+.imagem__titulo {
     width: 46rem;
     height: auto;
     padding-top: 2.8rem;
     filter: brightness(1);
     opacity: 1;
-} 
-main{
+}
+
+main {
     padding-top: 0rem;
-    display:flex;
+    padding-left: 3.5%;
+    padding-right: 7%;
+    display: flex;
     flex-direction: column;
 }
-#mensagens__de__erro {
-    padding-left: 5.6%;
+
+.mensagens__de__erro {
+    padding-left: 8.5%;
     font-size: 15px;
     color: #FF7E07;
     height: 1.5rem;
@@ -53,38 +59,39 @@ main{
     visibility: hidden;
 }
 
-.instrucao {
-    position: absolute;
-    bottom: 2.25rem;
-    left: 1rem;
-    margin: 0;
-    font-size: 1rem;
-    pointer-events: none;
-    color: #E5E5E5;
-    display: block; /* Agora a instrução será exibida por padrão */
-}
 
-.entrada__e__saida__textos {
-    padding: 0% 4% 0% 4%;
-    display: flex; 
+
+.entrada__e__saida__textos{
+    display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    padding-left: 8%;
 }
-
-
-
-.imagem__alerta{
-    margin: 2%;
-    width: 5rem;
-    height: auto;
-}
-
-textarea {
+.area__caixa__entrada textarea{
     border: 1px solid #a8e8f7;
     padding-left: 2rem;
     padding-top: 1rem;
-    width: 47.5rem;
-    height: 45rem;
+    width: 30rem;
+    height: 38rem;
+    text-align: left;
+    border-radius: 1.8rem;
+    font-size: 1.5rem;
+    color: #69FB16;
+    text-decoration: none;
+    background-color: rgba(13, 13, 13, 0.6);    
+}
+
+.imagem__alerta{
+    margin: 2%;
+    padding: 1rem;
+    width: 5rem;
+    height: auto;
+}
+.area__caixa__saida textarea {
+    border: 1px solid #a8e8f7;
+    padding-left: 2rem;
+    padding-top: 1rem;
+    width: 30rem;
+    height: 34.625rem;
     text-align: left;
     border-radius: 1.8rem;
     font-size: 1.5rem;
@@ -93,42 +100,59 @@ textarea {
     background-color: rgba(13, 13, 13, 0.6);
 }
 
-.texto__instrucao__entrada{
-    color: #E5E5E5;
-}
-
-.area__texto__saida {  
-    color: #69FB16; /* Cor do texto */
-    position: relative; 
+.area__texto__saida {
+    color: #69FB16;
+    position: relative;
     padding: 0;
 }
 
-.segundos{
-
-    animation: blink 1s step-end infinite;
-    }
-    
-    @keyframes blink {
-        50% {
-            visibility: hidden;
-        }
-    }
-
 .instrucao {
-    position: absolute;
-    bottom: 1rem; /* Ajuste a posição vertical conforme necessário */
-    left: 1rem; /* Ajuste a posição horizontal conforme necessário */
-    margin: 0;
-    font-size: 1rem;
-    pointer-events: none; /* Evita que a instrução seja clicável */
-    color:#fa9a2c; /* Define a cor do texto da instrução */
+    background-color: rgba(13, 13, 13, 0.6); /* Cor de fundo */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 5px; /* Arredondamento das bordas */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra leve */
+    display: inline-block; /* Para adaptar ao tamanho do conteúdo */
 }
 
-.espaco__para__botoes {
-padding-top: 3rem;
+
+.segundos {
+    color: #f1a64f;
+    animation: blink-segundos 1s step-end infinite;
+}
+
+.soma__tempo {
+    color: #f1a64f;
+    animation: blink-soma__tempo 1s step-end infinite;
+}
+
+.violacao {
+    color: #f1a64f;
+    animation: blink-violacao 1s step-end infinite;
+}
+
+@keyframes blink-segundos {
+    50% {
+        visibility: visible;
+    }
+}
+
+@keyframes blink-soma__tempo {
+    50% {
+        visibility: visible;
+    }
+}
+
+@keyframes blink-violacao {
+    50% {
+        visibility: visible;
+    }
+}
+
+.espaco__para__botoes { 
+    padding-top: 3rem;
+    padding-left: 2%;
     display: flex;
     flex-direction: row;
-    /*justify-content: space-around;*/
     align-items: center;
 }
 
@@ -139,34 +163,34 @@ button {
     border-radius: 10px;
     color: #f1a64f;
     border: 1px solid #FF7E07; 
-    background-color:#08070B; 
+    background-color: #08070B; 
     cursor: pointer; 
     transition: background-color 0.3s ease;
 }
 
 .botao__criptografa {
-    padding-left: 8rem;
-
+    padding-left: 6.5rem;
 }
+
 .botao__descriptografa {
     padding-left: 6rem;
 }
+
 .botao__copia {
-    padding-left: 10rem
-} 
+    padding-left: 6rem;
+}
 
 footer {
     display: flex;
     flex-direction: row;
-     /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    padding: 2.25rem 0rem  1.25rem 5rem; /* Adiciona um preenchimento superior e inferior de 20px */
+    align-items: center;
+    padding: 2.25rem 0rem 1.25rem 14rem;
     background-color: transparent;
 }
 
 .texto__rodape {
     font-family: sans-serif;
-    font-size: 1.25rem; /* Adiciona a unidade 'rem' para o tamanho da fonte */
+    font-size: 1.25rem; 
     color: #E5E5E5;
 }
 
@@ -180,139 +204,14 @@ footer {
         background: url(assets/resist6.jpeg);
         background-size: cover;
         background-position: center;
-        filter: brightness(.60);
+        filter: brightness(0.60);
         z-index: -1; 
     }
-
 
     .cabecalho {
         width: auto;
         display: flex;
         flex-direction: row;
-        padding-right: 0rem;
-        padding-top: 0rem;
-        padding-bottom: 1rem;
-        padding-left: 2rem;
+        padding-right: 0;
     }
-
-    .imagem__logo {
-        width: 0.75rem;
-        height: auto;
-        filter: brightness(1);
-        opacity: 1;
-        padding: 2rem 1rem 1rem 0rem;
-    }
-
-    .imagem__titulo {
-        width: 18rem;
-        height: 1rem;
-        padding-top: 1rem;      
-        filter: brightness(1);
-        filter: contrast(150%) saturate(150%);
-        opacity: 1;
-    } 
-
-    main {      
-        display:flex;
-        flex-direction: column;
-   
-    }
-
-    .mensagens__de__erro {
-        background-color:#08070B; 
-        padding-left: 1.3rem;
-        font-size: 12px;
-        color: #FF7E07;
-        height: 1.5rem;
-        margin-top: 0rem;
-        margin-bottom: 0rem;
-        visibility: hidden;
-    }
-
-    .imagem__alerta {
-        display: none;
-    }
-
-    .imagem__alerta2 {
-        width: 16px; 
-        height: 16px;       
-    }
-
-    .entrada__e__saida__textos {
-        display: flex; 
-        flex-direction: column;
-        align-items: center;
-
-
-
-        padding: 1.5rem 2rem 0rem 2rem;
-    }
-
-    textarea {
-        border: 1px solid #a8e8f7;
-        padding-right: 2rem;
-        width: 320px;
-        height: 180px;
-        text-align: left;
-        border-radius: 0;
-        font-size: 1rem;
-        color: #69FB16;
-        text-decoration: none;
-        background-color: rgba(13, 13, 13, 0.6);
-    }
-
-    .instrucao{
-        font-size: 12px;
-
-    }
-
-    .espaco__para__botoes {
-        padding-top: 1rem;
-        padding-right: 0.5rem;
-        padding-bottom: 0%;    
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-    }
-
-    button {
-        font-size: 14px; 
-        margin: 0.rem;
-        width: 110px;
-        height: 30px;
-        border-radius: 6px;
-        color: #f1a64f;
-        border: 1px solid #FF7E07; 
-        background-color:#08070B; 
-        cursor: pointer; 
-        transition: background-color 0.3s ease;
-    }
-
-    .botao__criptografa {
-        padding-left: 0.5rem;
-       
-    }
-
-    .botao__descriptografa {
-        width: 120;
-        padding: 0;
-    }
-
-    .botao__copia {
-        padding: 0;
-    } 
-    
-    footer{
-        padding-top: 1rem;
-        padding-left: 1.1rem;
-     
-     }
-.texto__rodape{
-    font-size: 14px;
-    padding-right: 3%;
-    justify-content: center;
-
-}
-
 }

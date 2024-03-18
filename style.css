@@ -1,421 +1,233 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@200;300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
 
+/*@media (min-width: 3840px ){*/
 
-    body {
-        /*height: 80vh; */
-        margin: 0;
-        padding: 0;
-    }
-    
-    .background__container {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: url(assets/resist6.jpeg);
-        background-size: cover;
-        background-position: center;
-        filter: brightness(0.55);
-        z-index: -1; 
-    }
-    
-    .cabecalho {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
-    
-    .imagem__logo {
-        width: 3%;
-        height: auto;
-        filter: brightness(1);
-        opacity: 1;
-        padding: 5rem 10rem 0 12rem;
-    }
-    
-    .imagem__titulo {
-        width: 50%;
-        height: auto;
-        padding-top:2%;
-        padding-left: 3%;
-        filter: brightness(1);
-        opacity: 1;
-    }
-    
-    main {
-        display: flex;
-        flex-direction: column;
-        padding-top: 2%;
-        padding-left: 15%;
-    }
-    
-
-    
-    #mensagens__de__erro {
-        font-size: 2.87rem;
-        padding-left: 1%;
-        padding-bottom: 3rem;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular'; 
-        color:  #f1a64f;
-        height: 1.5rem; 
-        background-color: rgba(13, 13, 13, 0.8);
-        display: inline-block;        
-        visibility: hidden;  
-    }
-   
-    .entrada__e__saida__textos{
-        display: flex;
-        flex-direction: row;
-
-       
-    
-    }
-    .area__caixa__entrada textarea{
-        border: 1px solid #a8e8f7;
-        padding-left: 2rem;
-        padding-top: 1rem;
-        width: 70rem;
-        height: 80rem;
-        text-align: left;
-        border-radius: 1.8rem;
-        font-size:  3rem;
-        color: #69FB16;
-        text-decoration: none;
-        background-color: rgba(13, 13, 13, 0.6);    
-    }
-    
-    .imagem__alerta{
-      
-        padding: 5rem;
-        width: 15rem;
-        height: auto;
-    }
-    .area__caixa__saida textarea {
-        border: 1px solid #a8e8f7;
-        padding-left: 2rem;
-        padding-top: 1rem;
-        width: 70rem;
-        height: 70rem;
-        text-align: left;
-        border-radius: 1.8rem;
-        font-size: 3rem;
-        color: #69FB16;
-        text-decoration: none;
-        background-color: rgba(13, 13, 13, 0.6);
-    }
-    
-    .area__texto__saida {
-        color: #69FB16;
-        position: relative;
-        padding: 0;
-    }
-    
-    .instrucao { 
-        font-size: 36px;   
-        background-color: rgba(13, 13, 13, 0.8); 
-        padding: 0.625rem; 
-        border-radius: 0.3rem; 
-        box-shadow: 0.125rem 0.125rem .031rem rgba(0, 0, 0, 0.3); 
-        display: inline-block; 
+body {
+    margin: 0;
+    padding: 0;
 }
-        
-    .segundos {
-        color: #f1a64f;
-        animation: blink-segundos 1s step-end infinite;
-    }
-    
-    .soma__tempo {
-        color: #f1a64f;
-        animation: blink-soma__tempo 1s step-end infinite;
-    }
-    
-    .violacao {
-        color: #f1a64f;
-        animation: blink-violacao 1s step-end infinite;
-    }
-    
-    @keyframes blink-segundos {
-        50% {
-            visibility: visible;
-        }
-    }
-    
-    @keyframes blink-soma__tempo {
-        50% {
-            visibility: visible;
-        }
-    }
-    
-    @keyframes blink-violacao {
-        50% {
-            visibility: visible;
-        }
-    }
-    
-    .espaco__para__botoes { 
-        padding-top: 3%;
-        padding-left: 6%;
-        margin-top: 1%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
-    
-    button {
-        width: 40rem;
-        height: 6.8rem;
-        font-size: 3.12rem;
-        border-radius: 1.25rem;
-        color: #f1a64f;
-        border: 1px solid #FF7E07; 
-        background-color: #08070B; 
-        cursor: pointer; 
-        transition: background-color 0.3s ease;
-    }
-    
 
-    button:hover {
-        background-color: #0d0c10; 
-    }
-    
-    .botao__criptografa {
-        padding-left: 6.5rem;
-    }
-    
-    .botao__descriptografa {
-        padding-left: 6rem;
-    }
-    
-    .botao__copia {
-        padding-left: 6rem;
-    }
-       
-    footer {
-      
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding:3rem 0rem 0rem 2rem;
-      
-        background-color: transparent;
-    }
-    
-    .texto__rodape {
-        padding-bottom: 1.5rem;
-        padding-left: 0%;
-        margin-left: 15%;
-        font-family: sans-serif;
-        font-size: 2.87rem; 
-        color: #E5E5E5;
-    }
-     
+.background__container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(assets/resist6.jpeg);
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.55);
+    z-index: -1; 
+}
 
+.cabecalho {
+    padding-bottom: 3%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 
+}
 
-@media (max-width: 2560px) and (min-width: 1920px){
+.imagem__logo {
+    width: 2%;
+    height: auto;
+    filter: brightness(1);
+    opacity: 1;
+    padding: 2% 6%  0 6%;
+}
 
-    
-    .background__container {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: url(assets/resist6.jpeg);
-        background-size: cover;
-        background-position: center;
-        filter: brightness(0.55);
-        z-index: -1; 
+.imagem__titulo {
+    width: 50%;
+ 
+    padding-top: 3.3%;
+    padding-left:5% ;
+    filter: brightness(1);
+    opacity: 1;
+}
+
+main {
+    display: flex;
+    flex-direction: column;     
+    }    
+
+    .mensagens__de__erro{
+        padding-left: 14%;
     }
-    
-    .cabecalho {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
-    
-    .imagem__logo {
-        width: 1.5%;
-        height: auto;
-        filter: brightness(1);
-        opacity: 1;
-        padding: 2.5rem 5rem 0 6rem;
-    }
-    
-    .imagem__titulo {
-        width: 25%;
-        height: auto;
-        padding-top: 1%;
-        padding-left: 1.5%;
-        filter: brightness(1);
-        opacity: 1;
-    }
-    
-    main {
-        display: flex;
-        flex-direction: column;
-        padding-top: 1%;
-        padding-left: 7.5%;
-    }
-    
+
     #mensagens__de__erro {
-        font-size: 1.435rem;
-        padding-left: 0.5%;
-        padding-bottom: 1.5rem;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular'; 
-        color:  #f1a64f;
-        height: 0.75rem; 
-        background-color: rgba(13, 13, 13, 0.8);
-        display: inline-block;        
-        visibility: hidden;  
-    }
-    
-    .entrada__e__saida__textos {
-        display: flex;
-        flex-direction: row;
-    }
-    
-    .area__caixa__entrada textarea {
-        border: 0.5px solid #a8e8f7;
-        padding-left: 1rem;
-        padding-top: 0.5rem;
-        width: 35rem;
-        height: 35rem;
-        text-align: left;
-        border-radius: 0.9rem;
-        font-size: 2rem;
-        color: #69FB16;
-        text-decoration: none;
-        background-color: rgba(13, 13, 13, 0.6);    
-    }
-    
-    .imagem__alerta {
-        padding: 2.5rem;
-        width: 7.5rem;
-        height: auto;
-    }
-    
-    .area__caixa__saida textarea {
-        border: 0.5px solid #a8e8f7;
-        padding-left: 1rem;
-        padding-top: 0.5rem;
-        width: 35rem;
-        height: 30rem;
-        text-align: left;
-        border-radius: 0.9rem;
-        font-size:  2rem;
-        color: #69FB16;
-        text-decoration: none;
-        background-color: rgba(13, 13, 13, 0.6);
-    }
-    
-    .area__texto__saida {
-        color: #69FB16;
-        position: relative;
-        padding: 0;
-    }
-    
-    .instrucao { 
-        font-size: 18px;   
-        background-color: rgba(13, 13, 13, 0.8); 
-        padding: 0.3125rem; 
-        border-radius: 0.15rem; 
-        box-shadow: 0.0625rem 0.0625rem .0155rem rgba(0, 0, 0, 0.3); 
-        display: inline-block; 
-    }
-    
-    .segundos {
+        top: 13%;
+        /*padding-left: 27%;*/
+        font-family: "Lucida Sans", "Lucida Sans Regular";
+        font-size: 2.2rem;
         color: #f1a64f;
-        animation: blink-segundos 0.5s step-end infinite;
+        display: inline-block;
+        visibility: hidden;
+        position: absolute;
+        background-color:  rgba(0, 0, 0, 0.5);
+        border-radius: 0.7%;
     }
+      
+      
+
+
+
+.entrada__e__saida__textos{
+    padding-right: 25%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.area__caixa__entrada textarea{
+    border: 1px solid #a8e8f7;
+    padding-left: 2rem;
+    padding-top: 1rem;
+    width: 50rem;
+    height: 50rem;
+    text-align: left;
+    border-radius: 1.8rem;
+    font-size: 3rem;
+    color: #69FB16;
+    background-color: rgba(13, 13, 13, 0.6);    
+}
+
+.imagem__alerta{
+    margin: 2%;
+    padding: 3rem;
+    width: 7rem;
+    height: auto;
+}
+.area__caixa__saida textarea {
+    border: 1px solid #a8e8f7;
+    padding-left: 2rem;
+    padding-top: 1rem;
+    width: 50rem;
+    height: 42rem;
+    text-align: left;
+    border-radius: 1.8rem;
+    font-size: 3rem;
+    color: #69FB16;
+    background-color: rgba(13, 13, 13, 0.6);
+}
+
+.area__texto__saida {
+    color: #69FB16;
+    position: relative;
+    padding: 0;
+}
+
+.instrucao {    
+    background-color: rgba(13, 13, 13, 0.8); 
+    font-size: 1.65rem;
+    padding: 0.625rem; 
+    border-radius: 0.3rem; 
+    box-shadow: 0.125rem 0.125rem .031rem rgba(0, 0, 0, 0.3); 
+    display: inline-block; 
+}
+
+.segundos {
+    color: #f1a64f;
+    animation: blink-segundos 1s step-end infinite;
+}
+
+.soma__tempo {
+    color: #f1a64f;
+    animation: blink-soma__tempo 1s step-end infinite;
+}
+
+.violacao {
+    color: #f1a64f;
+    animation: blink-violacao 1s step-end infinite;
+}
+
+@keyframes blink-segundos {
+    50% {
+        visibility: visible;
+    }
+}
+
+@keyframes blink-soma__tempo {
+    50% {
+        visibility: visible;
+    }
+}
+
+@keyframes blink-violacao {
+    50% {
+        visibility: visible;
+    }
+}
+
+.espaco__para__botoes { 
+    padding-top:1.6%;
+    padding-left: 11%;
+   
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+}
+
+button {
+    font-size: 2.08rem;
+    width: 24rem;
+    height: 5rem;
     
-    .soma__tempo {
-        color: #f1a64f;
-        animation: blink-soma__tempo 0.5s step-end infinite;
-    }
-    
-    .violacao {
-        color: #f1a64f;
-        animation: blink-violacao 0.5s step-end infinite;
-    }
-    
-    @keyframes blink-segundos {
-        50% {
-            visibility: visible;
-        }
-    }
-    
-    @keyframes blink-soma__tempo {
-        50% {
-            visibility: visible;
-        }
-    }
-    
-    @keyframes blink-violacao {
-        50% {
-            visibility: visible;
-        }
-    }
-    
-    .espaco__para__botoes { 
-        padding-top: 1.5%;
-        padding-left: 3%;
-        margin-top: 0.5%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
-    
-    button {
-        width: 20rem;
-        height: 3.4rem;
-        font-size: 1.56rem;
-        color: #f1a64f;
-        border: 0.5px solid #FF7E07;
-        border-radius: .625rem; 
-        background-color: #08070B; 
-        cursor: pointer; 
-        transition: background-color 0.3s ease;
-    }
-    
-    button:hover {
-        background-color: #0d0c10; 
-    }
-    
-    .botao__criptografa {
-        padding-left: 3.25rem;
-    }
-    
-    .botao__descriptografa {
-        padding-left: 3rem;
-    }
-    
-    .botao__copia {
-        padding-left: 3rem;
-    }
-    
-    footer {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding: 3rem 0rem 0rem 1rem;
-        background-color: transparent;
-    }
-    
-    .texto__rodape {
-        padding-bottom: 0.75rem;
-        padding-left: 0%;
-        margin-left: 7.5%;
-        font-family: sans-serif;
-        font-size: 1.435rem; 
-        color: #E5E5E5;
-    }
-    /*
-@media (max-width: 1919px) and (min-width: 1681px)
-@media (max-width: 1680px) and (min-width: 1580px) 
-@media (max-width: 1579px) and (min-width: 1440px)    
-@media (min-width: 1280px) and (max-width: 1439px)
-  @media (min-width: 345px) and (max-width: 470px) 
-    */
+    border-radius: 10px;
+    color: #f1a64f;
+    border: 1px solid #FF7E07; 
+    background-color: #08070B; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease;
+}
+
+
+button:hover {
+    background-color: #0d0c10; 
+}
+
+.botao__criptografa {
+    padding-left: 6.5rem;
+}
+
+.botao__descriptografa {
+    padding-left: 6rem;
+}
+
+.botao__copia {
+    padding-left: 6rem;
+}
+
+footer {
+    height: 2rem;
+    display: flex;
+    flex-direction: row;
+    padding: 3% 0rem 0rem 2%;
+    margin-left: 10%;
+    background-color: transparent;
+}
+
+.texto__rodape {
+    padding-bottom: 1.5rem;
+    padding-left: 1.8%;
+  
+    font-family: sans-serif;
+    font-size: 2rem; 
+    color: #E5E5E5;
+}
+
+
+@media (max-width: 2560px) and (min-width: 1921px) 
+
+/*
+@media (max-width: 1920px) and (min-width: 11441)
+@media (max-width: 1440px) and (min-width: 1337)    
+@media (min-width: 1336px) and (max-width: 1281px)
+@media (min-width: 1280px) and (max-width: 1025px)
+@media (min-width: 1024px) and (max-width: 700px) 
+@media (min-width: 699px) and (max-width: 432px) 
+@media (min-width: 431px) and (max-width:376px)
+@media (min-width: 375px) and (max-width: 280px) */

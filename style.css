@@ -23,24 +23,25 @@ body {
 }
 
 .cabecalho {
-    padding-bottom: 4%;
+    padding-bottom: 7.5%;
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
 .imagem__logo {
-    width: 2%;
+    width: 3%;
     height: auto;
     filter: brightness(1);
     opacity: 1;
-    padding: 6% 6%  0 10%;
+    padding: 4% 6%  0 10%;
 }
 
 .imagem__titulo {
-    width: 50%;
+    width: 55%;
+    height: auto;
     padding-top: 3.3%;
-    padding-left: 5%;
+    padding-left: 6%;
     filter: brightness(1);
     opacity: 1;
 }
@@ -51,17 +52,18 @@ main {
     }    
 
     .mensagens__de__erro{
-        padding-left: 14%;
+        padding-left: 12%;
     }
 
     #mensagens__de__erro {
-        top: 21.4%;
+        top: 20%;
         font-family: "Lucida Sans", "Lucida Sans Regular";
-        font-size: 1.8rem;
-        color: #f1a64f;
+        font-size: 1.2rem;
+        color: #69FB16;
         display: inline-block;
         visibility: hidden;
         position: absolute;
+        background-size: auto;
         background-color:  rgba(0, 0, 0, 0.5);
         border-radius: 0.7%;
     }
@@ -77,30 +79,30 @@ main {
     border: 1px solid #a8e8f7;
     padding-left: 2rem;
     padding-top: 1rem;
-    width: 40rem;
-    height: 40rem;
+    width: 30rem;
+    height: 32rem;
     text-align: left;
     border-radius: 1.8rem;
-    font-size: 2rem;
+    font-size: 1.2rem;
     color: #69FB16;
     background-color: rgba(13, 13, 13, 0.6);    
 }
 
 .imagem__alerta{
     margin: 2%;
-    padding: 3rem;
-    width: 7rem;
+    padding: 2rem;
+    width: 3rem;
     height: auto;
 }
 .area__caixa__saida textarea {
     border: 1px solid #a8e8f7;
     padding-left: 2rem;
     padding-top: 1rem;
-    width: 40rem;
-    height: 33rem;
+    width: 30rem;
+    height: 27rem;
     text-align: left;
     border-radius: 1.8rem;
-    font-size: 2rem;
+    font-size: 1.2rem;
     color: #69FB16;
     background-color: rgba(13, 13, 13, 0.6);
 }
@@ -113,26 +115,27 @@ main {
 
 .instrucao {    
     background-color: rgba(13, 13, 13, 0.8);
+    background-size: auto;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.2rem;
-    padding: 0.625rem; 
+    font-size: 1rem;
+    padding: 0.5rem; 
     border-radius: 0.3rem; 
     box-shadow: 0.125rem 0.125rem .031rem rgba(0, 0, 0, 0.3); 
     display: inline-block; 
 }
 
 .segundos {
-    color: #f1a64f;
+    color: #69FB16;
     animation: blink-segundos 1s step-end infinite;
 }
 
 .soma__tempo {
-    color: #f1a64f;
+    color: #69FB16;
     animation: blink-soma__tempo 1s step-end infinite;
 }
 
 .violacao {
-    color: #f1a64f;
+    color: #69FB16;
     animation: blink-violacao 1s step-end infinite;
 }
 
@@ -156,9 +159,7 @@ main {
 
 .espaco__para__botoes { 
     padding-top:1.6%;
- 
-   
-    display: flex;
+   display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
@@ -201,14 +202,14 @@ footer {
     justify-content: center; /* Centraliza horizontalmente */
     background-color: transparent;
     align-items: center;
-    padding-top: 4%;
+    padding-top: 7%;
 }
 
 .texto__rodape {
     padding-bottom: 1.5rem;
     margin: auto; /* Centraliza longitudinalmente */
     font-family: sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: #E5E5E5;
 }
 
@@ -521,24 +522,1086 @@ footer {
     }
 }
 
-@media  (min-width: 1600px){  
 
-    
+@media (max-width:1440px){
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.background__container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(assets/resist6.jpeg);
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.55);
+    z-index: -1; 
+}
+
+.cabecalho {
+    padding-bottom: 7.5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.imagem__logo {
+    width: 3%;
+    height: auto;
+    filter: brightness(1);
+    opacity: 1;
+    padding: 4% 6%  0 10%;
+}
+
+.imagem__titulo {
+    width: 55%;
+    height: auto;
+    padding-top: 3.3%;
+    padding-left: 6%;
+    filter: brightness(1);
+    opacity: 1;
+}
+
+main {
+    display: flex;
+    flex-direction: column;     
+    }    
+
+    .mensagens__de__erro{
+        padding-left: 12%;
+    }
+
+    #mensagens__de__erro {
+        top: 20%;
+        font-family: "Lucida Sans", "Lucida Sans Regular";
+        font-size: 1.2rem;
+        color: #69FB16;
+        display: inline-block;
+        visibility: hidden;
+        position: absolute;
+        background-size: auto;
+        background-color:  rgba(0, 0, 0, 0.5);
+        border-radius: 0.7%;
+    }
+ 
+.entrada__e__saida__textos{
+    padding-right: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.area__caixa__entrada textarea{
+    border: 1px solid #a8e8f7;
+    padding-left: 2rem;
+    padding-top: 1rem;
+    width: 30rem;
+    height: 32rem;
+    text-align: left;
+    border-radius: 1.8rem;
+    font-size: 1.2rem;
+    color: #69FB16;
+    background-color: rgba(13, 13, 13, 0.6);    
+}
+
+.imagem__alerta{
+    margin: 2%;
+    padding: 2rem;
+    width: 3rem;
+    height: auto;
+}
+.area__caixa__saida textarea {
+    border: 1px solid #a8e8f7;
+    padding-left: 2rem;
+    padding-top: 1rem;
+    width: 30rem;
+    height: 27rem;
+    text-align: left;
+    border-radius: 1.8rem;
+    font-size: 1.2rem;
+    color: #69FB16;
+    background-color: rgba(13, 13, 13, 0.6);
+}
+
+.area__texto__saida {
+    color: #69FB16;
+    position: relative;
+    padding: 0;
+}
+
+.instrucao {    
+    background-color: rgba(13, 13, 13, 0.8);
+    background-size: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    padding: 0.5rem; 
+    border-radius: 0.3rem; 
+    box-shadow: 0.125rem 0.125rem .031rem rgba(0, 0, 0, 0.3); 
+    display: inline-block; 
+}
+
+.segundos {
+    color: #69FB16;
+    animation: blink-segundos 1s step-end infinite;
+}
+
+.soma__tempo {
+    color: #69FB16;
+    animation: blink-soma__tempo 1s step-end infinite;
+}
+
+.violacao {
+    color: #69FB16;
+    animation: blink-violacao 1s step-end infinite;
+}
+
+@keyframes blink-segundos {
+    50% {
+        visibility: visible;
+    }
+}
+
+@keyframes blink-soma__tempo {
+    50% {
+        visibility: visible;
+    }
+}
+
+@keyframes blink-violacao {
+    50% {
+        visibility: visible;
+    }
+}
+
+.espaco__para__botoes { 
+    padding-top:1.6%;
+   display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    font-size: 1.56rem;
+    width: 18rem;
+    height: 3.75rem;    
+    border-radius: 10px;
+    color: #f1a64f;
+    border: 1px solid #FF7E07; 
+    background-color: #08070B; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease;
 }
 
 
+button:hover {
+    background-color: #0d0c10; 
+}
+
+.botao__criptografa {
+    padding-left: 6.5rem;
+}
+
+.botao__descriptografa {
+    padding-left: 6rem;
+}
+
+.botao__copia {
+    padding-left: 6rem;
+}
+
+footer {
+    height: 3%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Centraliza horizontalmente */
+    background-color: transparent;
+    align-items: center;
+    padding-top: 7%;
+}
+
+.texto__rodape {
+    padding-bottom: 1.5rem;
+    margin: auto; /* Centraliza longitudinalmente */
+    font-family: sans-serif;
+    font-size: 1.3rem;
+    color: #E5E5E5;
+}
+}
+
+
+@media (min-width: 1366px){
+
+    .mensagens__de__erro{
+        padding-left: 15%;
+    }
+
+    #mensagens__de__erro {
+        top: 22%;
+        font-family: "Lucida Sans", "Lucida Sans Regular";
+        font-size: 1rem;
+        color: #69FB16;
+        display: inline-block;
+        visibility: hidden;
+        position: absolute;
+        background-size: auto;
+        background-color:  rgba(0, 0, 0, 0.5);
+        border-radius: 0.7%;
+    }
+
+
+
+    .area__caixa__entrada textarea{
+        border: 1px solid #a8e8f7;
+        padding-left: 2rem;
+        padding-top: 1rem;
+        width: 27rem;
+        height: 21rem;
+        text-align: left;
+        border-radius: 1.8rem;
+        font-size: 1.2rem;
+        color: #69FB16;
+        background-color: rgba(13, 13, 13, 0.6);    
+    }
+
+    .area__caixa__saida textarea {
+        border: 1px solid #a8e8f7;
+        padding-left: 2rem;
+        padding-top: 1rem;
+        width: 25rem;
+        height: 15rem;
+        text-align: left;
+        border-radius: 1.8rem;
+        font-size: 1.2rem;
+        color: #69FB16;
+        background-color: rgba(13, 13, 13, 0.6);
+    }
+}
+
+
+@media (min-width: 1280px)  {
+
+    
+    .cabecalho {
+        padding-bottom: 6.5%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .imagem__logo {
+        width: 3%;
+        height: auto;
+        filter: brightness(1);
+        opacity: 1;
+        padding: 3% 6%  0 10%;
+    }
+
+    .area__caixa__entrada textarea{
+        border: 1px solid #a8e8f7;
+        padding-left: 2rem;
+        padding-top: 1rem;
+        width: 27rem;
+        height: 25rem;
+        text-align: left;
+        border-radius: 1.8rem;
+        font-size: 1.2rem;
+        color: #69FB16;
+        background-color: rgba(13, 13, 13, 0.6);    
+    }
+    
+    .imagem__alerta{
+      
+        padding: 1.5rem;
+        width: 3.2rem;
+        height: auto;
+    }
+    .area__caixa__saida textarea {
+        border: 1px solid #a8e8f7;
+        padding-left: 2rem;
+        padding-top: 1rem;
+        width: 25rem;
+        height: 21.5rem;
+        text-align: left;
+        border-radius: 1.8rem;
+        font-size: 1.2rem;
+        color: #69FB16;
+        background-color: rgba(13, 13, 13, 0.6);
+    }
+
+    .instrucao { 
+        position: absolute;   
+        background-color: rgba(13, 13, 13, 0.8);
+        background-size: auto;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.8rem;
+        padding: 0.5rem; 
+        border-radius: 0.3rem; 
+        box-shadow: 0.031rem 0.031rem .031rem rgba(0, 0, 0, 0.3); 
+        display: inline-block; 
+    }
+
+
+    .espaco__para__botoes { 
+        padding-top: 1.6%;
+        padding-right: 5%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    button {
+        font-size: 1.2rem;
+        width: 14.5rem;
+        height: 3rem;    
+        border-radius: 10px;
+        color: #f1a64f;
+        border: 1px solid #FF7E07; 
+        background-color: #08070B; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease;
+    } 
+
+    .botao__criptografa {
+        padding-left: 5rem;
+    }
+
+    footer {
+        height: 3%;
+        width: 100%;        
+        display: flex;
+        flex-direction: row;
+        justify-content: center; /* Centraliza horizontalmente */
+        background-color: transparent;
+        align-items: center;
+        padding-top: 4.5%;
+        padding-left: 0%;
+        padding-right: 4%;
+    }
+
+    .texto__rodape {
+        padding-bottom: 1rem;
+        margin: auto; /* Centraliza longitudinalmente */
+        font-family: sans-serif;
+        font-size: 1.2rem;
+        color: #E5E5E5;}
+    }
+
+    @media (max-width: 768px) {
+
+        .cabecalho{
+            padding-top: 2.5rem;
+        }
+    
+        .imagem__logo {
+            width: 4%;
+            height: auto;
+            filter: brightness(1);
+            opacity: 1;
+            padding: 4% 4%  0 10%;
+        }
+        
+        .imagem__titulo {
+            width: 70%;
+            height: auto;
+            padding-top: 4%;
+            padding-left: 2%;
+            filter: brightness(1);
+            opacity: 1;
+        }
+    
+        .mensagens__de__erro{
+            padding-left: 11%;
+         
+        }
+    
+    
+        #mensagens__de__erro {
+            padding-right: 8%;
+            top: 19.5%; 
+            font-size: 1rem;
+        }
+        
+        .entrada__e__saida__textos{
+            padding-top: 6%;
+            padding-right: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+    
+        .area__caixa__entrada textarea{
+            border: 1px solid #a8e8f7;
+            padding-left: 1rem;
+            padding-top: 1rem;
+            width: 17rem;
+            height: 32rem;
+            text-align: left;
+            border-radius: 1.8rem;
+            font-size: 1rem;
+            color: #69FB16;
+            background-color: rgba(13, 13, 13, 0.6);    
+        }
+    
+        .imagem__alerta{
+            margin: 1%;
+            padding: 1rem;
+            width: 1.4rem;
+            height: auto;
+        }
+        .area__caixa__saida textarea {
+            border: 1px solid #a8e8f7;
+            padding-left: 1rem;
+            padding-top: 1rem;
+            width: 17rem;
+            height: 27rem;
+            text-align: left;   
+            font-size: 1rem;
+            color: #69FB16;
+            background-color: rgba(13, 13, 13, 0.6);
+        }
+    
+        .area__texto__saida {
+            color: #69FB16;
+            position: relative;
+            padding: 0;
+        }
+    
+        .instrucao { 
+            position: absolute;   
+            background-color: rgba(13, 13, 13, 0.8);
+            background-size: auto;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.6rem;
+            padding: 1rem 3rem 0.5rem 0rem; 
+            border-radius: 0.3rem; 
+            box-shadow: 0.125rem 0.125rem .031rem rgba(0, 0, 0, 0.3); 
+            display: inline-block; 
+        }
+    
+        .espaco__para__botoes { 
+            padding-top:1.8%;
+            padding-bottom: 1.5%;
+            padding-right: 7% ;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+    
+        button {
+            font-size: 1rem;
+            width: 9rem;
+            height: 3rem;    
+            border-radius: 6px;
+            color: #f1a64f;
+            border: 1px solid #FF7E07; 
+            background-color: #08070B; 
+            cursor: pointer; 
+            transition: background-color 0.3s ease;
+        }
+    
+        .botao__criptografa {
+            padding-left: 4rem;
+        }
+    
+        footer {
+            height: 3%;
+            width: 80%;        
+            display: flex;
+            flex-direction: row;
+            justify-content: center; /* Centraliza horizontalmente */
+            background-color: transparent;
+            align-items: center;
+            padding-top: 10%;
+            padding-left: 10%;
+            padding-right: 10%;
+        }
+        
+        .texto__rodape {
+            text-align: justify;
+            font-family: sans-serif;
+            font-size: 1.10rem;
+            color: #E5E5E5;
+        }
+    }
+    
+    
+
+    
+@media (max-width: 430px) and (min-width: 394px) {
+
+
+
+    .cabecalho{
+        padding-top: 2rem;
+        padding-bottom: 4rem;
+    
+    }
+
+    .imagem__logo {
+        width: 4%;
+        height: auto;
+        filter: brightness(1);
+        opacity: 1;
+        padding: 4% 2.5%  0 6.5%;
+    }
+    
+    .imagem__titulo {
+        width: 80%;
+        height: auto;
+        padding-top: 4%;
+        padding-left: 2%;
+        filter: brightness(1);
+        opacity: 1;
+    }
+
+   
+
+
+    main {
+        padding-top: 4%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;     
+        }    
+    
+  
+        .mensagens__de__erro{
+            position: absolute;
+            width: 80%;
+            top: 15.6%;
+            padding-left: 0%;
+        }
+    
+        #mensagens__de__erro {
+        
+            font-family: "Lucida Sans", "Lucida Sans Regular";
+            font-size: 0.8rem;
+            color: #69FB16;
+            display: inline-block;
+            visibility: hidden;
+            position: absolute;
+            background-size: auto;
+            background-color:  rgba(0, 0, 0, 0.8);
+            border-radius: 0.7%;
+        }
+ 
+    .entrada__e__saida__textos{
+ position: relative;
+        padding-top: 6%;     
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .area__caixa__entrada textarea{
+        border: 1px solid #a8e8f7;
+        padding-left: 1rem;
+        padding-top: 1rem;
+        width: 22rem;
+        height: 14rem;
+        text-align: left;
+        border-radius: 1.8rem;
+        font-size: 1rem;
+        color: #69FB16;
+        background-color: rgba(13, 13, 13, 0.6);    
+    }
+
+    .imagem__alerta{
+        position: absolute;
+        top: 2%;
+        right: 1%;
+        padding: 1rem;
+        width: 2rem;
+        height: auto;
+    }
+
+    .area__texto__saida {
+        color: #69FB16;
+        position: relative;
+        padding: 0;
+    }
+
+    .area__caixa__saida{
+        padding-top: 4rem;
+    }
+
+    .area__caixa__saida textarea {
+        border: 1px solid #a8e8f7;
+        padding-left: 1rem;
+        padding-top: 1rem;
+        width: 22rem;
+        height: 14rem;
+        text-align: left;   
+        font-size: 1rem;
+        color: #69FB16;
+        background-color: rgba(13, 13, 13, 0.6);
+    }
+
+    .instrucao { 
+        color: #69FB16;
+        align-items: center;
+        position: absolute;  
+        background-size: auto; 
+        background-color: rgba(13, 13, 13, 0.8);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.7rem;
+        padding: 0rem 0rem 0rem 0rem; 
+        border-radius: 0.3rem; 
+        box-shadow: 0.125rem 0.125rem .031rem  rgba(0, 0, 0, 0.3); 
+        display: inline-block; 
+    }
+
+    .espaco__para__botoes { 
+        top: 47.5%;
+        position: absolute;
+        padding-top:0%;
+        padding-bottom: 0%;
+        padding-right: 0% ;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    button {
+        font-size: 0.9rem;
+        width: 7rem;
+        height: 2rem;    
+        border-radius: 6px;
+        color: #f1a64f;
+        border: 1px solid #FF7E07; 
+        background-color: #08070B; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease;
+    }
+
+    .botao__criptografa {
+        padding-left: 0.2rem;
+    }
+
+    .botao__descriptografa {
+        padding-left: 1rem;
+    }
+
+    .botao__copia {
+        padding-left: 1rem;
+    }
+
+   .footer {
+        position: absolute;  
+        width: 100%;        
+        display: flex;
+        flex-direction: row;
+        justify-content: center; 
+        background-color: transparent;
+        align-items: center;
+        padding-top: 0%;   
+    }
+        
+        .texto__rodape {
+            padding-top: 7%;
+            text-align: center;
+            font-family: sans-serif;
+            font-size: 0.8rem;
+            color: #E5E5E5;
+        }
+    }
+    
+    @media (max-width: 393px) and (min-width: 376px) {
+
+        
+    .cabecalho{
+        padding-top: 1rem;
+   
+    
+    }
+
+    .imagem__logo {
+        width: 4%;
+        height: auto;
+        filter: brightness(1);
+        opacity: 1;
+        padding: 4% 2.5%  0 6.5%;
+    }
+    
+    .imagem__titulo {
+        width: 80%;
+        height: auto;
+        padding-top: 4%;
+        padding-left: 2%;
+        filter: brightness(1);
+        opacity: 1;
+    }
+
+   
+
+
+    main {
+        padding-top: 4%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;     
+        }    
+    
+  
+        .mensagens__de__erro{
+            position: absolute;
+            width: 70%;
+            top:14.5%;
+            padding-left: 0%;
+            display: inline-block;
+            visibility: hidden;
+            background-size: auto;
+            background-color:  rgba(0, 0, 0, 0.2);
+            border-radius: 0.7%;
+        }
+    
+        #mensagens__de__erro {        
+            font-family: "Lucida Sans", "Lucida Sans Regular";
+            font-size: 0.7rem;
+            color: #69FB16;
+
+        }
+ 
+    .entrada__e__saida__textos{
+        position: relative;
+        align-items: center;
+        padding-top: 7%;     
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .area__caixa__entrada textarea{
+        border: 1px solid #a8e8f7;
+        padding-left: 1rem;
+        padding-top: 1rem;
+        width: 19rem;
+        height: 10rem;
+        text-align: left;
+        border-radius: 0.5rem;
+        font-size: 0.8rem;
+        color: #69FB16;
+        background-color: rgba(13, 13, 13, 0.6);    
+    }
+
+    .imagem__alerta{
+        position: absolute;
+        top: 0.5%;
+        right: 0.3%;
+        padding: 0rem;
+        width: 1.2rem;
+        height: auto;
+    }
+
+    .area__texto__saida {
+        color: #69FB16;
+        position: relative;
+        padding: 0;
+    }
+
+    .area__caixa__saida{
+        padding-top: 1%;
+    }
+
+    .area__caixa__saida textarea {
+        border: 1px solid #a8e8f7;
+        padding-left: 1rem;
+        padding-top: 1rem;
+        width: 19rem;
+        height: 10rem;
+        text-align: left;
+        border-radius: 0.5rem;   
+        font-size: 0.8rem;
+        color: #69FB16;
+        background-color: rgba(13, 13, 13, 0.6);
+    }
+
+    .instrucao { 
+     
+        color: #69FB16;
+        align-items: center;
+        position: relative;  
+        background-size: auto; 
+        background-color: rgba(13, 13, 13, 0.8);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.6rem;
+        padding: 0rem 0rem 0rem 0rem; 
+        border-radius: 0.3rem; 
+        box-shadow: 0.125rem 0.125rem .031rem  rgba(0, 0, 0, 0.3); 
+        display: inline-block; 
+    }
+
+    .espaco__para__botoes { 
+        top: 46.5%;
+        position:relative;
+        padding-top:0%;
+        padding-bottom: 0%;
+        padding-right: 0% ;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    button {
+        font-size: 0.70rem;
+        width: 6rem;
+        height: 1.7rem;    
+        border-radius: 6px;
+        color: #f1a64f;
+        border: 1px solid #FF7E07; 
+        background-color: #08070B; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease;
+    }
+
+    .botao__criptografa {
+        padding-left: 0.2rem;
+    }
+
+    .botao__descriptografa {
+        padding-left: 1rem;
+    }
+
+    .botao__copia {
+        padding-left: 1rem;
+    }
+
+   .footer {
+        position: relative;  
+        width: 100%;        
+        display: flex;
+        flex-direction: row;
+        justify-content: center; 
+        background-color: transparent;
+        align-items: center;
+        padding-top: 0%;   
+    }
+        
+        .texto__rodape {
+            padding-top: 0%;
+            text-align: center;
+            font-family: sans-serif;
+            font-size: 0.8rem;
+            color: #E5E5E5;
+        }
+    }
+    
+
+
+    @media (max-width: 375px) and (min-width: 320px) {
+
+        
+        .cabecalho{
+            padding-top: 1rem;
+            padding-bottom: 3rem;
+        }
+    
+        .imagem__logo {
+            width: 6%;
+            height: auto;
+            filter: brightness(1);
+            opacity: 1;
+            padding: 4% 2.5%  0 6.5%;
+        }
+        
+
+    
+       
+    
+    
+        main {
+            padding-top: 7%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;     
+            }    
+        
+      
+            .mensagens__de__erro{
+                position: absolute;
+                width: 80%;
+                top:7.8rem;
+                padding-left: 0%;
+                display: inline-block;
+                visibility: hidden;
+                background-size: auto;
+                background-color:  rgba(0, 0, 0, 0.2);
+                border-radius: 0.7%;
+            }
+        
+            #mensagens__de__erro {        
+                font-family: "Lucida Sans", "Lucida Sans Regular";
+                font-size: 0.7rem;
+                color: #69FB16;
+    
+            }
+     
+        .entrada__e__saida__textos{
+            position: relative;
+            align-items: center;
+            padding-top: 7%;     
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    
+        .area__caixa__entrada textarea{
+            border: 1px solid #a8e8f7;
+            padding-left: 1rem;
+            padding-top: 1rem;
+            width: 18rem;
+            height: 10rem;
+            text-align: left;
+            border-radius: 0.5rem;
+            font-size: 0.8rem;
+            color: #69FB16;
+            background-color: rgba(13, 13, 13, 0.6);    
+        }
+    
+        .imagem__alerta{
+            position: absolute;
+            top: 0.5%;
+            right: 0.3%;
+            padding: 0rem;
+            width: 1.2rem;
+            height: auto;
+        }
+    
+        .area__texto__saida {
+            color: #69FB16;
+            position: relative;
+            padding: 0;
+        }
+    
+        .area__caixa__saida{
+            padding-top: 1%;
+        }
+    
+        .area__caixa__saida textarea {
+            border: 1px solid #a8e8f7;
+            padding-left: 1rem;
+            padding-top: 1rem;
+            width: 18rem;
+            height: 10rem;
+            text-align: left;
+            border-radius: 0.5rem;   
+            font-size: 0.8rem;
+            color: #69FB16;
+            background-color: rgba(13, 13, 13, 0.6);
+        }
+    
+        .instrucao { 
+         
+            color: #69FB16;
+            align-items: center;
+            position: relative;  
+            background-size: auto; 
+            background-color: rgba(13, 13, 13, 0.8);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.6rem;
+            padding: 1rem 0rem 1rem 0rem; 
+            border-radius: 0.3rem; 
+            box-shadow: 0.125rem 0.125rem .031rem  rgba(0, 0, 0, 0.3); 
+            display: inline-block; 
+        }
+    
+        .espaco__para__botoes { 
+            top: 46.5%;
+            position:relative;
+            padding-top:4%;
+            padding-bottom: 0%;
+            padding-right: 0% ;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+    
+        button {
+            font-size: 0.70rem;
+            width: 5.5rem;
+            height: 1.7rem;    
+            border-radius: 6px;
+            color: #f1a64f;
+            border: 1px solid #FF7E07; 
+            background-color: #08070B; 
+            cursor: pointer; 
+            transition: background-color 0.3s ease;
+        }
+    
+        .botao__criptografa {
+            padding-left: 0.2rem;
+        }
+    
+        .botao__descriptografa {
+            padding-left: 1rem;
+        }
+    
+        .botao__copia {
+            padding-left: 1rem;
+        }
+    
+
+        footer {
+         
+            width: 93%;        
+            display: flex;
+            flex-direction: row;
+            justify-content: center; /* Centraliza horizontalmente */
+            background-color: transparent;
+            align-items: center;
+            padding-top: 30%;
+            padding-left: 1%;
+            padding-right: 1%;
+        }
+        
+        .texto__rodape {
+            text-align: center;
+            font-family: sans-serif;
+            font-size: 0.8rem;
+            color: #E5E5E5;
+        }
+
+        
 
 
 
 
-
-
-
+     /*   
+       .footer {
+            position: relative;  
+            width: 100%;        
+            display: flex;
+            flex-direction: row;
+            justify-content: center; 
+            background-color: transparent;
+            align-items: center;
+            padding-top: 0%;   
+        }
+            
+            .texto__rodape {
+                padding-top: 0%;
+                text-align: center;
+                font-family: sans-serif;
+                font-size: 0.8rem;
+                color: #E5E5E5;
+            }*/
+        }
+        
+    
 
 /*
-@media (max-width: 1440px)    
 @media (min-width: 1336px) 
-@media (min-width: 1280px) 
+
 @media (min-width: 1024px) 
 @media (min-width: 690px and max-width: 850px) 
 @media (min-width: 431px) and (max-width:376px)

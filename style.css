@@ -67,7 +67,7 @@ main {
         background-color:  rgba(0, 0, 0, 0.5);
         border-radius: 0.7%;
     }
- 
+
 .entrada__e__saida__textos{
     padding-right: 0;
     display: flex;
@@ -159,7 +159,7 @@ main {
 
 .espaco__para__botoes { 
     padding-top:1.6%;
-   display: flex;
+    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
@@ -213,6 +213,7 @@ footer {
     color: #E5E5E5;
 }
 
+
 @media (max-width: 3840px){
 
     .imagem__titulo {
@@ -238,7 +239,7 @@ footer {
         background-color:  rgba(0, 0, 0, 0.5);
         border-radius: 0.7%;
     }
- 
+    
 .entrada__e__saida__textos{
     padding-right: 0;
     display: flex;
@@ -265,6 +266,7 @@ footer {
     width: 9cqb;
     height: auto;
 }
+
 .area__caixa__saida textarea {
     border: 1px solid #a8e8f7;
     padding-left: 2rem;
@@ -294,13 +296,8 @@ footer {
     display: inline-block; 
 }
 
-
-
-
 .espaco__para__botoes { 
-    padding-top:1.6%;
- 
-   
+    padding-top:1.6%;   
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -394,7 +391,6 @@ footer {
         border-radius: 0.7%;
     }
 
-
     .area__caixa__entrada textarea{
         border: 1px solid #a8e8f7;
         padding-left: 2rem;
@@ -448,79 +444,6 @@ footer {
     }    
 }
 
-
-@media (max-width: 1920px) {
-
-    .imagem__logo {
-        width: 2%;
-        height: auto;
-        filter: brightness(1);
-        opacity: 1;
-        padding: 3.5% 6%  0 10%;
-    }
-
-    #mensagens__de__erro {
-        top: 20.6%;
-        font-family: "Lucida Sans", "Lucida Sans Regular";
-        font-size: 1.8rem;
-        color: #f1a64f;
-        display: inline-block;
-        visibility: hidden;
-        position: absolute;
-        background-color:  rgba(0, 0, 0, 0.5);
-        border-radius: 0.7%;
-    }
-
-    .area__caixa__entrada textarea{
-        border: 1px solid #a8e8f7;
-        padding-left: 2rem;
-        padding-top: 1rem;
-        width: 37rem;
-        height: 31rem;
-        text-align: left;
-        border-radius: 1.8rem;
-        font-size: 1.5rem;
-        color: #69FB16;
-        background-color: rgba(13, 13, 13, 0.6);    
-    }
-    
-    .imagem__alerta{
-        margin: 2%;
-        padding: 3rem;
-        width: 7rem;
-        height: auto;
-    }
-    .area__caixa__saida textarea {
-        border: 1px solid #a8e8f7;
-        padding-left: 2rem;
-        padding-top: 1rem;
-        width: 3s7rem;
-        height: 32rem;
-        text-align: left;
-        border-radius: 1.8rem;
-        font-size: 1.5rem;
-        color: #69FB16;
-        background-color: rgba(13, 13, 13, 0.6);
-    }
-
-    .instrucao {    
-        background-color: rgba(13, 13, 13, 0.8);
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 1.2rem;
-        padding: 0.625rem; 
-        border-radius: 0.3rem; 
-        box-shadow: 0.125rem 0.125rem .031rem rgba(0, 0, 0, 0.3); 
-        display: inline-block; 
-    }
-
-    .texto__rodape {
-        padding-bottom: 1.5rem;
-        margin: auto; /* Centraliza longitudinalmente */
-        font-family: sans-serif;
-        font-size: 1.4rem;
-        color: #E5E5E5;
-    }
-}
 
 
 @media (max-width:1440px){
@@ -587,7 +510,7 @@ main {
         background-color:  rgba(0, 0, 0, 0.5);
         border-radius: 0.7%;
     }
- 
+    
 .entrada__e__saida__textos{
     padding-right: 0;
     display: flex;
@@ -679,7 +602,7 @@ main {
 
 .espaco__para__botoes { 
     padding-top:1.6%;
-   display: flex;
+    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
@@ -754,8 +677,6 @@ footer {
         border-radius: 0.7%;
     }
 
-
-
     .area__caixa__entrada textarea{
         border: 1px solid #a8e8f7;
         padding-left: 2rem;
@@ -815,8 +736,7 @@ footer {
         background-color: rgba(13, 13, 13, 0.6);    
     }
     
-    .imagem__alerta{
-      
+    .imagem__alerta{      
         padding: 1.5rem;
         width: 3.2rem;
         height: auto;
@@ -845,7 +765,6 @@ footer {
         box-shadow: 0.031rem 0.031rem .031rem rgba(0, 0, 0, 0.3); 
         display: inline-block; 
     }
-
 
     .espaco__para__botoes { 
         padding-top: 1.6%;
@@ -916,10 +835,8 @@ footer {
         }
     
         .mensagens__de__erro{
-            padding-left: 11%;
-         
+            padding-left: 11%;        
         }
-    
     
         #mensagens__de__erro {
             padding-right: 8%;
@@ -1031,12 +948,8 @@ footer {
         }
     }
     
-    
-
-    
+        
 @media (max-width: 430px) and (min-width: 394px) {
-
-
 
     .cabecalho{
         padding-top: 2rem;
@@ -1061,17 +974,13 @@ footer {
         opacity: 1;
     }
 
-   
-
-
     main {
         padding-top: 4%;
         display: flex;
         flex-direction: column;
         align-items: center;     
         }    
-    
-  
+        
         .mensagens__de__erro{
             position: absolute;
             width: 80%;
@@ -1079,8 +988,7 @@ footer {
             padding-left: 0%;
         }
     
-        #mensagens__de__erro {
-        
+        #mensagens__de__erro {        
             font-family: "Lucida Sans", "Lucida Sans Regular";
             font-size: 0.8rem;
             color: #69FB16;
@@ -1091,9 +999,9 @@ footer {
             background-color:  rgba(0, 0, 0, 0.8);
             border-radius: 0.7%;
         }
- 
+    
     .entrada__e__saida__textos{
- position: relative;
+        position: relative;
         padding-top: 6%;     
         display: flex;
         flex-direction: column;
@@ -1194,7 +1102,7 @@ footer {
         padding-left: 1rem;
     }
 
-   .footer {
+    .footer {
         position: absolute;  
         width: 100%;        
         display: flex;
@@ -1213,14 +1121,12 @@ footer {
             color: #E5E5E5;
         }
     }
+
     
     @media (max-width: 393px) and (min-width: 376px) {
-
         
     .cabecalho{
-        padding-top: 1rem;
-   
-    
+        padding-top: 1rem;    
     }
 
     .imagem__logo {
@@ -1240,17 +1146,13 @@ footer {
         opacity: 1;
     }
 
-   
-
-
     main {
         padding-top: 4%;
         display: flex;
         flex-direction: column;
         align-items: center;     
         }    
-    
-  
+        
         .mensagens__de__erro{
             position: absolute;
             width: 70%;
@@ -1267,10 +1169,9 @@ footer {
             font-family: "Lucida Sans", "Lucida Sans Regular";
             font-size: 0.7rem;
             color: #69FB16;
-
         }
- 
-    .entrada__e__saida__textos{
+    
+        .entrada__e__saida__textos{
         position: relative;
         align-items: center;
         padding-top: 7%;     
@@ -1324,8 +1225,7 @@ footer {
         background-color: rgba(13, 13, 13, 0.6);
     }
 
-    .instrucao { 
-     
+    .instrucao {      
         color: #69FB16;
         align-items: center;
         position: relative;  
@@ -1375,7 +1275,7 @@ footer {
         padding-left: 1rem;
     }
 
-   .footer {
+    .footer {
         position: relative;  
         width: 100%;        
         display: flex;
@@ -1412,8 +1312,7 @@ footer {
             opacity: 1;
             padding: 4% 2.5%  0 6.5%;
         }
-        
-   
+    
         main {
             padding-top: 7%;
             display: flex;
@@ -1421,8 +1320,7 @@ footer {
             align-items: center;     
             }    
         
-      
-            .mensagens__de__erro{
+        .mensagens__de__erro{
                 position: absolute;
                 width: 80%;
                 top:7.8rem;
@@ -1438,9 +1336,8 @@ footer {
                 font-family: "Lucida Sans", "Lucida Sans Regular";
                 font-size: 0.7rem;
                 color: #69FB16;
-    
             }
-     
+    
         .entrada__e__saida__textos{
             position: relative;
             align-items: center;
@@ -1495,8 +1392,7 @@ footer {
             background-color: rgba(13, 13, 13, 0.6);
         }
     
-        .instrucao { 
-         
+        .instrucao {          
             color: #69FB16;
             align-items: center;
             position: relative;  
@@ -1546,9 +1442,7 @@ footer {
             padding-left: 1rem;
         }
     
-
-        footer {
-         
+        footer {         
             width: 93%;        
             display: flex;
             flex-direction: row;
@@ -1566,39 +1460,7 @@ footer {
             font-size: 0.8rem;
             color: #E5E5E5;
         }
-
+    }
         
 
 
-
-
-     /*   
-       .footer {
-            position: relative;  
-            width: 100%;        
-            display: flex;
-            flex-direction: row;
-            justify-content: center; 
-            background-color: transparent;
-            align-items: center;
-            padding-top: 0%;   
-        }
-            
-            .texto__rodape {
-                padding-top: 0%;
-                text-align: center;
-                font-family: sans-serif;
-                font-size: 0.8rem;
-                color: #E5E5E5;
-            }*/
-        }
-        
-    
-
-/*
-@media (min-width: 1336px) 
-
-@media (min-width: 1024px) 
-@media (min-width: 690px and max-width: 850px) 
-@media (min-width: 431px) and (max-width:376px)
-@media (min-width: 375px) and (max-width: 280px) */

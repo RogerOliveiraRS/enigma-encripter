@@ -4,12 +4,12 @@
 
 
 
-body {
+.mobile body {
     margin: 0;
     padding: 0;
 }
 
-.background__container {
+.mobile .background__container {
     position: fixed;
     top: 0;
     left: 0;
@@ -22,7 +22,7 @@ body {
     z-index: -1; 
 }
 
-.cabecalho {
+.mobile .cabecalho {
     padding-top: 3vw;
     padding-bottom:1vw;
     display: flex;
@@ -373,7 +373,7 @@ footer {
        (max-width: 1080px) and (min-width: 1080px) and (max-height: 2400px) {
 
  
-    .cabecalho {
+        .mobile .cabecalho {
         padding-top: 10vw;
         padding-bottom: 16vw;
         display: flex;
@@ -383,21 +383,21 @@ footer {
 
     }
     
-    .imagem__logo {
+    .mobile .imagem__logo {
         width:1.3rem;
         height: auto;
         filter: brightness(1);
         opacity: 1;
     }
     
-    .imagem__titulo {
+    .mobile .imagem__titulo {
         width: 75%;
         padding-left: 5%;
         filter: brightness(1);
         opacity: 1;
     }
     
-    main {
+    .mobile main {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -405,7 +405,7 @@ footer {
         margin: 6%;
         }    
     
-        .mensagens__de__erro{
+        .mobile .mensagens__de__erro{
             position: absolute;
             width: 80vw;
             display: flex;
@@ -413,7 +413,7 @@ footer {
         
     }
     
-    #mensagens__de__erro {
+    .mobile #mensagens__de__erro {
             text-align: right;
             margin-left: 4vw;
             margin-right: 3vw;                 
@@ -426,18 +426,18 @@ footer {
             border-radius: 0.7%;
         }
         
-    .entrada__e__saida__textos{
+        .mobile .entrada__e__saida__textos{
         display: flex;
         flex-direction: column;  
         align-items: center;
         flex: 1;     
     }
 
-    .instrucao__e__entrada{
+    .mobile .instrucao__e__entrada{
         padding-bottom: 15vw;
     }
     
-    .area__caixa__entrada textarea{
+    .mobile .area__caixa__entrada textarea{
         border: 1px solid #a8e8f7;
         padding-left: 1vw;
         padding-top: 1vw;
@@ -450,7 +450,7 @@ footer {
         background-color: rgba(13, 13, 13, 0.6);       
     }
     
-    .imagem__alerta{
+    .mobile .imagem__alerta{
         position: absolute;
         left: 13vw;
         top: 33vw;
@@ -460,12 +460,12 @@ footer {
         display: block;
     }
     
-    .area__texto__saida {
+    .mobile .area__texto__saida {
         color: #69FB16;
         position: relative;
     }
     
-    .area__caixa__saida textarea {
+    .mobile .area__caixa__saida textarea {
         border: 1px solid #a8e8f7;
         padding-left: 1vw;
         padding-top: 1vw;
@@ -478,7 +478,7 @@ footer {
         background-color: rgba(13, 13, 13, 0.6);
     }
     
-    .instrucao {  
+    .mobile .instrucao {  
         position: absolute;         
         font-family: Arial, Helvetica, sans-serif;
         font-size: 4% ;
@@ -487,27 +487,27 @@ footer {
         background-color: rgba(13, 13, 13, 0.5);
     }
 
-    .copie{
+    .mobile .copie{
         font-size: 1.4vh;
         margin-bottom: 0.3vh;
     }
 
-    .auto__destroi{
+    .mobile .auto__destroi{
         font-size: 1.4vh;
         margin-bottom: 0.3vh;
     }
     
-    .mais__tempo{
+    .mobile .mais__tempo{
         font-size: 1.4vh;
         margin-bottom: 0.3vh;
     }
 
-    .violado__perimetro{
+    .mobile  .violado__perimetro{
         font-size: 1.4vh;
         margin-bottom: 0.3vh;
     }
 
-    .espaco__para__botoes {
+    .mobile .espaco__para__botoes {
         position: absolute; 
         padding-bottom: 4vw,3vh;  
         display: flex;
@@ -516,7 +516,7 @@ footer {
         justify-content: center;
     }
     
-    button {
+    .mobile .button {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -532,7 +532,7 @@ footer {
         transition: background-color 0.3s ease;
     }
         
-    footer {   
+    .mobile footer {   
         height: 3vw;
         width: 80%;
         justify-content: center; /* Centraliza horizontalmente */
@@ -542,7 +542,7 @@ footer {
         padding: 10vw;
     }
     
-    .texto__rodape {
+    .mobile .texto__rodape {
         text-align: justify ;
         text-align-last: center;      
         font-family: sans-serif;

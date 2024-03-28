@@ -5,6 +5,18 @@ let lastClickTime = 0;
 const intervaloDeClique = 1000; // 1 segundo
 const tempoContagemRegressiva = 60000; // 30 segundos
 
+/*
+function detectarDispositivoMovel() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    }
+  
+  if (detectarDispositivoMovel()) {
+    document.body.classList.add('mobile');
+    } else {
+    document.body.classList.add('desktop');
+    }
+  */
+
 // Função para fazer um elemento piscar
 function fazerPiscar(elemento) {
     setInterval(() => {

@@ -4,12 +4,12 @@
 
 
 
-.mobile body {
+body {
     margin: 0;
     padding: 0;
 }
 
-.mobile .background__container {
+.background__container {
     position: fixed;
     top: 0;
     left: 0;
@@ -22,7 +22,7 @@
     z-index: -1; 
 }
 
-.mobile .cabecalho {
+.cabecalho {
     padding-top: 3vw;
     padding-bottom:1vw;
     display: flex;
@@ -219,7 +219,7 @@ footer {
 @media (max-width:899px) and (min-width:431){
 
 
-    .cabecalho {
+    .mobile .cabecalho {
         padding-top: 7vw;
         padding-bottom:1vw;
         display: flex;
@@ -228,14 +228,14 @@ footer {
         justify-content: center;
     }
     
-    .imagem__logo {
+    .mobile .imagem__logo {
         width: 3.5%;
         height: auto;
         filter: brightness(1);
         opacity: 1;
     }
     
-    .imagem__titulo {
+    .mobile .imagem__titulo {
         width: 50%;
     
         padding-left: 5%;
@@ -243,7 +243,7 @@ footer {
         opacity: 1;
     }
     
-    main {
+    .mobile  main {
         padding-top: 7vw;
         display: flex;
         flex-direction: column;
@@ -253,12 +253,12 @@ footer {
     
         }    
     
-        .mensagens__de__erro{
+        .mobile .mensagens__de__erro{
         display: flex;
         justify-content: center;    
         }
     
-    #mensagens__de__erro {
+        .mobile  #mensagens__de__erro {
         top: 21vw;       
         font-family: "Lucida Sans", "Lucida Sans Regular";
         font-size: 1rem;
@@ -270,14 +270,14 @@ footer {
         border-radius: 0.7%;
         }
         
-    .entrada__e__saida__textos{
+        .mobile .entrada__e__saida__textos{
         display: flex;
         flex-direction: row;  
         align-items: top;
         flex: 1;     
     }
     
-    .area__caixa__entrada textarea{
+    .mobile .area__caixa__entrada textarea{
         border: 1px solid #a8e8f7;
         padding-left: 1vw;
         padding-top: 1vw;
@@ -290,19 +290,19 @@ footer {
         background-color: rgba(13, 13, 13, 0.6);            
     }
     
-    .imagem__alerta{
+    .mobile .imagem__alerta{
         padding: 1rem;
         width:5vw;
         height: auto;
     }
         
-    .area__texto__saida {
+    .mobile .area__texto__saida {
         color: #69FB16;
         position: relative;
         padding: 0;
     }
         
-    .area__caixa__saida textarea {
+    .mobile .area__caixa__saida textarea {
         border: 1px solid #a8e8f7;
         padding-left: 1vw;
         padding-top: 1vw;
@@ -317,7 +317,7 @@ footer {
     
     
     
-    .instrucao {          
+    .mobile .instrucao {          
         font-family: Arial, Helvetica, sans-serif;
         font-size: 1.4vw;
         padding: 0.625rem; 
@@ -325,7 +325,7 @@ footer {
         background-color: rgba(13, 13, 13, 0.7);
     }
     
-    .espaco__para__botoes { 
+    .mobile .espaco__para__botoes { 
         padding-top:2.4%;  
         display: flex;
         flex-direction: row;
@@ -333,7 +333,7 @@ footer {
         justify-content: center;
     }
     
-    button {
+    .mobile  button {
         margin: 1.7vw;
         font-size: 2.2vw;
         width: 21vw;
@@ -348,7 +348,7 @@ footer {
     
 
     
-    footer {
+    .mobile footer {
         height: 5vw;
         width: 100%;
         display: flex;
@@ -359,7 +359,7 @@ footer {
         padding-top: 3%;
     }
     
-    .texto__rodape {
+    .mobile  .texto__rodape {
         padding-bottom: 2vh, 2vw;
         margin: auto; /* Centraliza longitudinalmente */
         font-family: sans-serif;

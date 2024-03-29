@@ -219,7 +219,7 @@ footer {
 @media (max-width:899px) and (min-width:431){
 
 
-    .mobile .cabecalho {
+.cabecalho {
         padding-top: 7vw;
         padding-bottom:1vw;
         display: flex;
@@ -228,14 +228,14 @@ footer {
         justify-content: center;
     }
     
-    .mobile .imagem__logo {
+.imagem__logo {
         width: 3.5%;
         height: auto;
         filter: brightness(1);
         opacity: 1;
     }
     
-    .mobile .imagem__titulo {
+.imagem__titulo {
         width: 50%;
     
         padding-left: 5%;
@@ -243,7 +243,7 @@ footer {
         opacity: 1;
     }
     
-    .mobile  main {
+main {
         padding-top: 7vw;
         display: flex;
         flex-direction: column;
@@ -253,12 +253,12 @@ footer {
     
         }    
     
-        .mobile .mensagens__de__erro{
+.mensagens__de__erro{
         display: flex;
         justify-content: center;    
         }
     
-        .mobile  #mensagens__de__erro {
+#mensagens__de__erro {
         top: 21vw;       
         font-family: "Lucida Sans", "Lucida Sans Regular";
         font-size: 1rem;
@@ -270,14 +270,14 @@ footer {
         border-radius: 0.7%;
         }
         
-        .mobile .entrada__e__saida__textos{
+.entrada__e__saida__textos{
         display: flex;
         flex-direction: row;  
         align-items: top;
         flex: 1;     
     }
     
-    .mobile .area__caixa__entrada textarea{
+.area__caixa__entrada textarea{
         border: 1px solid #a8e8f7;
         padding-left: 1vw;
         padding-top: 1vw;
@@ -290,19 +290,19 @@ footer {
         background-color: rgba(13, 13, 13, 0.6);            
     }
     
-    .mobile .imagem__alerta{
+.imagem__alerta{
         padding: 1rem;
         width:5vw;
         height: auto;
     }
         
-    .mobile .area__texto__saida {
+.area__texto__saida {
         color: #69FB16;
         position: relative;
         padding: 0;
     }
         
-    .mobile .area__caixa__saida textarea {
+ .area__caixa__saida textarea {
         border: 1px solid #a8e8f7;
         padding-left: 1vw;
         padding-top: 1vw;
@@ -317,7 +317,7 @@ footer {
     
     
     
-    .mobile .instrucao {          
+ .instrucao {          
         font-family: Arial, Helvetica, sans-serif;
         font-size: 1.4vw;
         padding: 0.625rem; 
@@ -325,7 +325,7 @@ footer {
         background-color: rgba(13, 13, 13, 0.7);
     }
     
-    .mobile .espaco__para__botoes { 
+ .espaco__para__botoes { 
         padding-top:2.4%;  
         display: flex;
         flex-direction: row;
@@ -333,7 +333,7 @@ footer {
         justify-content: center;
     }
     
-    .mobile  button {
+ button {
         margin: 1.7vw;
         font-size: 2.2vw;
         width: 21vw;
@@ -348,7 +348,7 @@ footer {
     
 
     
-    .mobile footer {
+   footer {
         height: 5vw;
         width: 100%;
         display: flex;
@@ -359,7 +359,7 @@ footer {
         padding-top: 3%;
     }
     
-    .mobile  .texto__rodape {
+  .texto__rodape {
         padding-bottom: 2vh, 2vw;
         margin: auto; /* Centraliza longitudinalmente */
         font-family: sans-serif;
@@ -373,7 +373,7 @@ footer {
        (max-width: 1080px) and (min-width: 1080px) and (max-height: 2400px) {
 
  
-        .mobile .cabecalho {
+     .cabecalho {
         padding-top: 10vw;
         padding-bottom: 16vw;
         display: flex;
@@ -382,22 +382,21 @@ footer {
         justify-content: center;
 
     }
-    
-    .mobile .imagem__logo {
+.imagem__logo {
         width:1.3rem;
         height: auto;
         filter: brightness(1);
         opacity: 1;
     }
     
-    .mobile .imagem__titulo {
+.imagem__titulo {
         width: 75%;
         padding-left: 5%;
         filter: brightness(1);
         opacity: 1;
     }
     
-    .mobile main {
+ main {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -405,7 +404,7 @@ footer {
         margin: 6%;
         }    
     
-        .mobile .mensagens__de__erro{
+.mensagens__de__erro{
             position: absolute;
             width: 80vw;
             display: flex;
@@ -413,7 +412,7 @@ footer {
         
     }
     
-    .mobile #mensagens__de__erro {
+#mensagens__de__erro {
             text-align: right;
             margin-left: 4vw;
             margin-right: 3vw;                 
@@ -426,18 +425,18 @@ footer {
             border-radius: 0.7%;
         }
         
-        .mobile .entrada__e__saida__textos{
+.entrada__e__saida__textos{
         display: flex;
         flex-direction: column;  
         align-items: center;
         flex: 1;     
     }
 
-    .mobile .instrucao__e__entrada{
+.instrucao__e__entrada{
         padding-bottom: 15vw;
     }
     
-    .mobile .area__caixa__entrada textarea{
+.area__caixa__entrada textarea{
         border: 1px solid #a8e8f7;
         padding-left: 1vw;
         padding-top: 1vw;
@@ -450,7 +449,7 @@ footer {
         background-color: rgba(13, 13, 13, 0.6);       
     }
     
-    .mobile .imagem__alerta{
+.imagem__alerta{
         position: absolute;
         left: 13vw;
         top: 33vw;
@@ -460,12 +459,12 @@ footer {
         display: block;
     }
     
-    .mobile .area__texto__saida {
+.area__texto__saida {
         color: #69FB16;
         position: relative;
     }
     
-    .mobile .area__caixa__saida textarea {
+.area__caixa__saida textarea {
         border: 1px solid #a8e8f7;
         padding-left: 1vw;
         padding-top: 1vw;
@@ -478,7 +477,7 @@ footer {
         background-color: rgba(13, 13, 13, 0.6);
     }
     
-    .mobile .instrucao {  
+.instrucao {  
         position: absolute;         
         font-family: Arial, Helvetica, sans-serif;
         font-size: 4% ;
@@ -487,27 +486,27 @@ footer {
         background-color: rgba(13, 13, 13, 0.5);
     }
 
-    .mobile .copie{
+.copie{
         font-size: 1.4vh;
         margin-bottom: 0.3vh;
     }
 
-    .mobile .auto__destroi{
+.auto__destroi{
         font-size: 1.4vh;
         margin-bottom: 0.3vh;
     }
     
-    .mobile .mais__tempo{
+.mais__tempo{
         font-size: 1.4vh;
         margin-bottom: 0.3vh;
     }
 
-    .mobile  .violado__perimetro{
+.violado__perimetro{
         font-size: 1.4vh;
         margin-bottom: 0.3vh;
     }
 
-    .mobile .espaco__para__botoes {
+.espaco__para__botoes {
         position: absolute; 
         padding-bottom: 4vw,3vh;  
         display: flex;
@@ -516,7 +515,7 @@ footer {
         justify-content: center;
     }
     
-    .mobile .button {
+.button {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -532,7 +531,7 @@ footer {
         transition: background-color 0.3s ease;
     }
         
-    .mobile footer {   
+footer {   
         height: 3vw;
         width: 80%;
         justify-content: center; /* Centraliza horizontalmente */
@@ -542,7 +541,7 @@ footer {
         padding: 10vw;
     }
     
-    .mobile .texto__rodape {
+.texto__rodape {
         text-align: justify ;
         text-align-last: center;      
         font-family: sans-serif;

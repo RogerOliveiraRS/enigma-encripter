@@ -5,21 +5,6 @@ let lastClickTime = 0;
 const intervaloDeClique = 1000; // 1 segundo
 const tempoContagemRegressiva = 60000; // 30 segundos
 
-// script.js
-function detectarDispositivoMovel() {
-    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-  }
-  
-  if (detectarDispositivoMovel()) {
-    document.body.classList.add('mobile');
-  } else {
-    document.body.classList.add('desktop');
-  }
-  
-
-
-  
-
 // Função para fazer um elemento piscar
 function fazerPiscar(elemento) {
     setInterval(() => {
@@ -31,7 +16,6 @@ function fazerPiscar(elemento) {
 document.querySelectorAll('span').forEach(span => {
     fazerPiscar(span);
 });
-
 
 function verificaCampos() {
     const textoNaEntrada = document.getElementById('textoEntrada').value;
@@ -50,8 +34,6 @@ function verificaCampos() {
         }, 30000);
     }
 } 
-
-
 
 function limparCampoEntrada() {
     document.getElementById('textoEntrada').value = '';
@@ -83,7 +65,6 @@ document.getElementById('textoSaida').addEventListener('click', async function (
     lastClickTime = currentTime; // Atualiza o tempo do último clique
 });
 
-
 function resetSaida() {
     document.getElementById('textoSaida').value = '';
     document.getElementById('instrucaoNaSaida').style.display = 'none';
@@ -92,15 +73,15 @@ function resetSaida() {
 /*function colocaImagemSaida(imagemsaida)
 if (document.getElementById('textoSaida').value = '')*/
 
-
-
 document.getElementById('textoEntrada').addEventListener('click', function () {
     limparCampoEntrada();
     resetMensagemErro();
 });
+
 document.addEventListener('DOMContentLoaded', () => {
     resetSaida();
 });
+
 function resetMensagemErro() {
     document.getElementById('mensagens__de__erro').textContent = '';
     document.getElementById('mensagens__de__erro').style.visibility = 'hidden';
@@ -118,8 +99,6 @@ function exibirMensagemErro(mensagem) {
         document.getElementById('pisca__alerta').style.visibility = 'hidden';
     }
 }
-
-
 function criptografa() {
     const textoNaEntrada = document.getElementById('textoEntrada').value;
     if (textoNaEntrada.trim() === '' || textoNaEntrada === 'Digite seu texto, com palavra ou texto contínuo, somente em minúsculas e sem caracteres especiais.') {
@@ -133,7 +112,6 @@ function criptografa() {
         encripta();
     }
 }
-
 
 function encripta() {
     const textoNaEntrada = document.getElementById('textoEntrada').value;
@@ -173,28 +151,29 @@ function descriptografa() {
     }
 }
 
-
-
-
 function ocultarMensagemErro() {
     document.getElementById('mensagens__de__erro').style.visibility = 'hidden';
     document.getElementById('pisca__alerta').style.visibility = 'hidden';
 }
+
 function resetEntrada() {
     clearTimeout(timeoutId);
     timeoutId = setTimeout(() => {
         document.getElementById('textoEntrada').value = '';
     }, 30000);
 }
+
 document.getElementById('textoEntrada').addEventListener('click', function () {
     limparCampoEntrada();
     resetMensagemErro();
 });
+
 document.addEventListener('DOMContentLoaded', () => {
     resetSaida();
     document.getElementById('pisca__alerta').style.visibility = 'hidden';
     instrucaoCampoEntrada();
 });
+
 function copiaParaTransferir() {
     const textoNaEntrada = document.getElementById('textoEntrada').value;
     if (textoNaEntrada !== 'Digite seu texto, com palavra ou texto contínuo, somente em minúsculas e sem caracteres especiais.') {

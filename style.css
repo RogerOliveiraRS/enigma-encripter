@@ -54,6 +54,7 @@ main {
     align-items: center;
     justify-content: center;
     margin: 4%;
+    padding-top: 3vw;
     }    
 
     .mensagens__de__erro{
@@ -62,9 +63,9 @@ main {
     }
 
     #mensagens__de__erro {
-        top: 9vw;       
+        top: 11vw;       
         font-family: "Lucida Sans", "Lucida Sans Regular";
-        font-size: 1rem;
+        font-size: 1.6vw ;
         color:#69FB16;
         display: inline-block;
         visibility: hidden;
@@ -213,7 +214,7 @@ footer {
     padding-bottom: 2vh, 2vw;
     margin: auto; /* Centraliza longitudinalmente */
     font-family: sans-serif;
-    font-size: 1.3vw;
+    font-size: 2vw;
     color: #E5E5E5;
 }
 
@@ -262,7 +263,7 @@ footer {
     #mensagens__de__erro {
         top: 21vw;       
         font-family: "Lucida Sans", "Lucida Sans Regular";
-        font-size: 1rem;
+        font-size: 1.2rem;
         color:#69FB16;
         display: inline-block;
         visibility: hidden;
@@ -272,21 +273,26 @@ footer {
         }
         
     .entrada__e__saida__textos{
+         
         display: flex;
         flex-direction: row;  
         align-items: top;
         flex: 1;     
+    }
+    .area__caixa__entrada{
+
+
     }
     
     .area__caixa__entrada textarea{
         border: 1px solid #a8e8f7;
         padding-left: 1vw;
         padding-top: 1vw;
-        width: 35vw;
+        width: 40vw;
         height: 48vw;
         text-align: left;
         border-radius: 1.2vw;
-        font-size: 1.1rem;
+        font-size: 1rem;
         color: #69FB16;
         background-color: rgba(13, 13, 13, 0.6);            
     }
@@ -307,11 +313,11 @@ footer {
         border: 1px solid #a8e8f7;
         padding-left: 1vw;
         padding-top: 1vw;
-        width: 35vw;
+        width: 40vw;
         height: 39vw;
         text-align: left;
         border-radius: 1.1vw;
-        font-size: 1.2rem;
+        font-size: 0.6rem;
         color: #69FB16;
         background-color: rgba(13, 13, 13, 0.6);
     }
@@ -320,7 +326,7 @@ footer {
     
     .instrucao {          
         font-family: Arial, Helvetica, sans-serif;
-        font-size: 1.4vw;
+        font-size: 1.7vw;
         padding: 0.625rem; 
         border-radius: 0.3rem; 
         background-color: rgba(13, 13, 13, 0.7);
@@ -364,7 +370,7 @@ footer {
         padding-bottom: 2vh, 2vw;
         margin: auto; /* Centraliza longitudinalmente */
         font-family: sans-serif;
-        font-size: 1.9vw;
+     
         color: #E5E5E5;
     }
 }
@@ -385,6 +391,7 @@ footer {
     }
     
     .imagem__logo {
+        padding-left: 3vw;
         width:1.3rem;
         height: auto;
         filter: brightness(1);
@@ -392,13 +399,15 @@ footer {
     }
     
     .imagem__titulo {
-        width: 75%;
-        padding-left: 5%;
+        width: 78%;
+        height: auto;
+        padding-left: 4%;
         filter: brightness(1);
         opacity: 1;
     }
     
     main {
+        padding-left: 2.5vw;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -415,11 +424,11 @@ footer {
     }
     
     #mensagens__de__erro {
-            text-align: right;
+            text-align: center;
             margin-left: 4vw;
-            margin-right: 3vw;                 
+            margin-right: 3.5vw;                 
             font-family: "Lucida Sans", "Lucida Sans Regular";
-            font-size: 3.3vw;
+            font-size: 2.5vw;
             color:#69FB16;
             display: inline-block;
             visibility: hidden;           
@@ -428,6 +437,7 @@ footer {
         }
         
     .entrada__e__saida__textos{
+    
         display: flex;
         flex-direction: column;  
         align-items: center;
@@ -438,11 +448,12 @@ footer {
         padding-bottom: 15vw;
     }
     
+    
     .area__caixa__entrada textarea{
         border: 1px solid #a8e8f7;
         padding-left: 1vw;
         padding-top: 1vw;
-        width: 70vw;
+        width: 85vw;
         height: 23vh;
         text-align: left;
         border-radius: 2vw;
@@ -453,8 +464,8 @@ footer {
     
     .imagem__alerta{
         position: absolute;
-        left: 13vw;
-        top: 33vw;
+        left: 7.5vw;
+        top: 35vw;
         padding: 0.5rem;
         width:5vw;
         height: auto;
@@ -462,15 +473,17 @@ footer {
     }
     
     .area__texto__saida {
+
         color: #69FB16;
         position: relative;
+      
     }
     
     .area__caixa__saida textarea {
         border: 1px solid #a8e8f7;
         padding-left: 1vw;
         padding-top: 1vw;
-        width: 70vw;
+        width: 85vw;
         height: 23vh;
         text-align: left;
         border-radius: 2vw;
@@ -481,36 +494,36 @@ footer {
     
     .instrucao {  
         position: absolute;         
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 4% ;
-        padding: 0.625rem; 
+        font-family: Arial, Helvetica, sans-serif; 
+        padding: 1vw;
         border-radius: 0.3rem; 
         background-color: rgba(13, 13, 13, 0.5);
+   
     }
 
     .copie{
-        font-size: 1.4vh;
+        font-size: 3vw;
         margin-bottom: 0.3vh;
     }
 
     .auto__destroi{
-        font-size: 1.4vh;
+        font-size: 3vw;
         margin-bottom: 0.3vh;
     }
     
     .mais__tempo{
-        font-size: 1.4vh;
+        font-size: 3vw;
         margin-bottom: 0.3vh;
     }
 
     .violado__perimetro{
-        font-size: 1.4vh;
-        margin-bottom: 0.3vh;
+        font-size: 3vw;
+  ;
     }
 
     .espaco__para__botoes {
         position: absolute; 
-        padding-bottom: 4vw,3vh;  
+        padding-bottom: 1vw;  
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -533,9 +546,13 @@ footer {
         transition: background-color 0.3s ease;
     }
         
-    footer {   
-        height: 3vw;
-        width: 80%;
+    footer { 
+  top: 6.6vw;
+
+        position: relative;
+        bottom: 1vw;
+        height: 10vw;
+        width: 85%;
         justify-content: center; /* Centraliza horizontalmente */
         align-items: center;
         background-color: transparent;
@@ -544,10 +561,11 @@ footer {
     }
     
     .texto__rodape {
+     
         text-align: justify ;
-        text-align-last: center;      
+        text-align-last: bottom;      
         font-family: sans-serif;
-        font-size: 0.7rem;
+        font-size: 3.3vw;
         color: #E5E5E5;
     }
 }
